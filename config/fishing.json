@@ -166,6 +166,7 @@
       "icon": "🌅",
       "desc": "海洋鱼类是战斗补给的主要来源。",
       "requiredLevel": 30,
+      "unlock": { "type": "threatCleared", "areaId": "mine_entrance" },
       "baseTime": 8000,
       "fish": [
         {
@@ -216,6 +217,7 @@
       "icon": "🪸",
       "desc": "珊瑚礁产出稀有料理鱼和水域材料。",
       "requiredLevel": 40,
+      "unlock": { "type": "threatCleared", "areaId": "wet_cave" },
       "baseTime": 9000,
       "fish": [
         {
@@ -258,6 +260,7 @@
       "icon": "🌊",
       "desc": "深海鱼类用于高级战斗食物。",
       "requiredLevel": 52,
+      "unlock": { "type": "threatCleared", "areaId": "wet_cave" },
       "baseTime": 10000,
       "fish": [
         {
@@ -292,6 +295,7 @@
       "icon": "🚢",
       "desc": "沉船水域产出特殊收藏与终局料理材料。",
       "requiredLevel": 65,
+      "unlock": { "type": "threatCleared", "areaId": "wet_cave" },
       "baseTime": 12000,
       "fish": [
         {
@@ -326,6 +330,7 @@
       "icon": "🕳️",
       "desc": "终局钓点,产出虚空系传说鱼。",
       "requiredLevel": 80,
+      "unlock": { "type": "threatCleared", "areaId": "wet_cave" },
       "baseTime": 14000,
       "fish": [
         {

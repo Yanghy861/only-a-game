@@ -26,10 +26,52 @@ function addLog(skill, entry) {
   if (state.log[skill].length > 30) state.log[skill].length = 30;
 }
 
+function isUnlockConditionMet(unlock) {
+  if (!unlock || unlock.type === 'start') return true;
+  if (unlock.type === 'threatCleared') return !!state.combat.areaThreatCleared?.[unlock.areaId];
+  if (unlock.type === 'areaUnlocked') return !!state.combat.unlocks?.areas?.[unlock.areaId];
+  if (unlock.type === 'feature') return !!state.combat.unlocks?.features?.[unlock.id];
+  return true;
+}
+
+function getUnlockConditionText(unlock) {
+  if (!unlock || unlock.type === 'start') return '';
+  if (unlock.type === 'threatCleared') {
+    const area = getCombatAreaById(unlock.areaId);
+    return area ? `需清理 ${area.name}` : '需清理前置威胁';
+  }
+  if (unlock.type === 'areaUnlocked') {
+    const area = getCombatAreaById(unlock.areaId);
+    return area ? `需发现 ${area.name}` : '需发现前置区域';
+  }
+  if (unlock.text) return unlock.text;
+  return '需完成前置条件';
+}
+
+function isSpotUnlocked(skill, spot) {
+  return !!spot && state[skill].level >= spot.requiredLevel && isUnlockConditionMet(spot.unlock);
+}
+
+function getSpotLockText(skill, spot) {
+  if (!spot) return '未解锁';
+  if (state[skill].level < spot.requiredLevel) return `需 Lv.${spot.requiredLevel}`;
+  return getUnlockConditionText(spot.unlock) || '未解锁';
+}
+
+function isGemSpotUnlocked(spot) {
+  return !!spot && state.gemology.level >= spot.requiredLevel && isUnlockConditionMet(spot.unlock);
+}
+
+function getGemSpotLockText(spot) {
+  if (!spot) return '未解锁';
+  if (state.gemology.level < spot.requiredLevel) return `需 Lv.${spot.requiredLevel}`;
+  return getUnlockConditionText(spot.unlock) || '未解锁';
+}
+
 // 通用:选择采集/钓鱼点
 function selectSkillSpot(skill, spotId, spotList) {
   const spot = spotList.find((s) => s.id === spotId);
-  if (!spot || state[skill].level < spot.requiredLevel) return false;
+  if (!isSpotUnlocked(skill, spot)) return false;
   state[skill].currentSpotId = spotId;
   state[skill].progress = 0;
   return true;

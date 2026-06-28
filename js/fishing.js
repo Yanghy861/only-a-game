@@ -21,14 +21,14 @@ const fishingEls = {
 function renderSpots() {
   fishingEls.spotsGrid.innerHTML = '';
   FISHING_SPOTS().forEach((spot) => {
-    const unlocked = state.fishing.level >= spot.requiredLevel;
+    const unlocked = isSpotUnlocked('fishing', spot);
     const selected = state.fishing.currentSpotId === spot.id;
     const card = document.createElement('div');
     card.className = 'spot-card' + (selected ? ' selected' : '') + (unlocked ? '' : ' locked');
     card.innerHTML = `
       <span class="spot-icon">${spot.icon}</span>
       <div class="spot-name">${spot.name}</div>
-      <div class="spot-req">${unlocked ? '✓ 已解锁' : `需 Lv.${spot.requiredLevel}`}</div>
+      <div class="spot-req">${unlocked ? '✓ 已解锁' : getSpotLockText('fishing', spot)}</div>
       <div class="spot-fish-preview">
         ${spot.fish.map((f) => `<span>${f.icon}</span>`).join('')}
       </div>

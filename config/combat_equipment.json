@@ -48,14 +48,14 @@
       { "id": "sh_spore_shawl", "name": "孢子披肩", "icon": "🧣", "atk": 10, "critDmg": 0.16, "recipe": { "spore_core": 4, "magic_dust": 6 }, "desc": "提高爆发伤害。" }
     ],
     "ring": [
-      { "id": "r_resin_ring", "name": "树脂戒指", "icon": "💍", "hp": 25, "recipe": { "resin": 5 }, "desc": "提供少量生命。" },
-      { "id": "r_iron_signet", "name": "铁印戒指", "icon": "💍", "atk": 7, "def": 4, "recipe": { "iron_shard": 6, "ore_dust": 4 }, "desc": "攻防兼具。" },
-      { "id": "r_venom_loop", "name": "毒环", "icon": "💍", "crit": 0.08, "critDmg": 0.1, "recipe": { "venom_sac": 4, "magic_dust": 4 }, "desc": "偏向暴击构筑。" }
+      { "id": "r_resin_ring", "name": "树脂戒指", "icon": "💍", "hp": 25, "recipe": { "resin": 5, "shell": 2 }, "desc": "提供少量生命。" },
+      { "id": "r_iron_signet", "name": "铁印戒指", "icon": "💍", "atk": 7, "def": 4, "recipe": { "iron_shard": 6, "ore_dust": 4, "pearl": 1 }, "desc": "攻防兼具。" },
+      { "id": "r_venom_loop", "name": "毒环", "icon": "💍", "crit": 0.08, "critDmg": 0.1, "recipe": { "venom_sac": 4, "magic_dust": 4, "coral_shard": 2 }, "desc": "偏向暴击构筑。" }
     ],
     "amulet": [
-      { "id": "am_bone_charm", "name": "骨链", "icon": "📿", "atk": 5, "hp": 20, "recipe": { "wolf_bone": 4, "leather": 2 }, "desc": "早期通用项链。" },
-      { "id": "am_bat_lantern", "name": "蝠翼灯坠", "icon": "📿", "spd": 4, "crit": 0.04, "recipe": { "bat_wing": 6, "magic_dust": 3 }, "desc": "提升速度和暴击。" },
-      { "id": "am_spore_core", "name": "孢子核心坠", "icon": "📿", "atk": 16, "hp": 45, "critDmg": 0.18, "recipe": { "spore_core": 5, "venom_sac": 3, "magic_dust": 6 }, "desc": "潮湿洞穴的核心构筑件。" }
+      { "id": "am_bone_charm", "name": "骨链", "icon": "📿", "atk": 5, "hp": 20, "recipe": { "wolf_bone": 4, "leather": 2, "fish_bone": 3 }, "desc": "早期通用项链。" },
+      { "id": "am_bat_lantern", "name": "蝠翼灯坠", "icon": "📿", "spd": 4, "crit": 0.04, "recipe": { "bat_wing": 6, "magic_dust": 3, "sea_salt": 4 }, "desc": "提升速度和暴击。" },
+      { "id": "am_spore_core", "name": "孢子核心坠", "icon": "📿", "atk": 16, "hp": 45, "critDmg": 0.18, "recipe": { "spore_core": 5, "venom_sac": 3, "magic_dust": 6, "sealed_bottle": 1 }, "desc": "潮湿洞穴的核心构筑件。" }
     ]
   },
   "monsterDrops": [

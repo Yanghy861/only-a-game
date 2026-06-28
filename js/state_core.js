@@ -353,9 +353,10 @@ function loadState() {
     // 校验各技能当前点是否解锁
     if (LEGACY_FISH_SPOT_MAP[state.fishing.currentSpotId]) state.fishing.currentSpotId = LEGACY_FISH_SPOT_MAP[state.fishing.currentSpotId];
     const currentFishingSpotExists = FISHING_SPOTS().some((spot) => spot.id === state.fishing.currentSpotId);
-    if (!currentFishingSpotExists || state.fishing.level < getSpotById(state.fishing.currentSpotId).requiredLevel) state.fishing.currentSpotId = 'pond';
-    if (state.woodcutting.level < getWoodSpotById(state.woodcutting.currentSpotId).requiredLevel) state.woodcutting.currentSpotId = 'grove';
-    if (state.mining.level < getMineSpotById(state.mining.currentSpotId).requiredLevel) state.mining.currentSpotId = 'quarry';
+    if (!currentFishingSpotExists || !isSpotUnlocked('fishing', getSpotById(state.fishing.currentSpotId))) state.fishing.currentSpotId = 'pond';
+    if (!isSpotUnlocked('woodcutting', getWoodSpotById(state.woodcutting.currentSpotId))) state.woodcutting.currentSpotId = 'grove';
+    if (!isSpotUnlocked('mining', getMineSpotById(state.mining.currentSpotId))) state.mining.currentSpotId = 'quarry';
+    if (!isGemSpotUnlocked(getGemSpotById(state.gemology.currentSpotId))) state.gemology.currentSpotId = 'gem_riverbed';
     // 兼容旧存档:迁移旧 inventory 结构
     if (parsed.inventory && !parsed.inventory.fish && typeof parsed.inventory === 'object') {
       state.inventory.fish = { ...parsed.inventory };

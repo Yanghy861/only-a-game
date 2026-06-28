@@ -16,6 +16,7 @@
     {
       "id": "gem_mine", "name": "宝石矿脉", "icon": "⛏️",
       "requiredLevel": 15, "baseDuration": 12000,
+      "unlock": { "type": "threatCleared", "areaId": "mine_entrance" },
       "desc": "深层矿脉中蕴含更多宝石",
       "drops": [
         { "id": "rough_quartz", "name": "石英原石", "icon": "⬜", "weight": 270, "gold": 5, "xp": 8 },
@@ -29,6 +30,7 @@
     {
       "id": "gem_abyss", "name": "深渊宝石洞", "icon": "🌌",
       "requiredLevel": 40, "baseDuration": 18000,
+      "unlock": { "type": "threatCleared", "areaId": "wet_cave" },
       "desc": "深渊中的稀有宝石,传说级别",
       "drops": [
         { "id": "rough_amethyst", "name": "紫水晶原石", "icon": "🟣", "weight": 180, "gold": 12, "xp": 15 },

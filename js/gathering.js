@@ -98,14 +98,14 @@ function renderGatherSpots(cfg, e) {
   e.spotsGrid.innerHTML = '';
   const s = state[cfg.stateKey];
   cfg.spotList().forEach((spot) => {
-    const unlocked = s.level >= spot.requiredLevel;
+    const unlocked = isSpotUnlocked(cfg.skill, spot);
     const selected = s.currentSpotId === spot.id;
     const card = document.createElement('div');
     card.className = 'spot-card' + (selected ? ' selected' : '') + (unlocked ? '' : ' locked');
     card.innerHTML = `
       <span class="spot-icon">${spot.icon}</span>
       <div class="spot-name">${spot.name}</div>
-      <div class="spot-req">${unlocked ? '✓ 已解锁' : `需 Lv.${spot.requiredLevel}`}</div>
+      <div class="spot-req">${unlocked ? '✓ 已解锁' : getSpotLockText(cfg.skill, spot)}</div>
       <div class="spot-fish-preview">
         ${spot.drops.map((d) => `<span>${d.icon}</span>`).join('')}
       </div>

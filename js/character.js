@@ -58,7 +58,7 @@ function renderAttrs() {
     const speed = skillSpeedMultiplier(sk.key);
     const speedPct = Math.min(100, ((speed - 1) / 0.5) * 100);
     const spotList = sk.spots();
-    const unlocked = spotList.filter((sp) => s.level >= sp.requiredLevel).length;
+    const unlocked = spotList.filter((sp) => isSpotUnlocked(sk.key, sp)).length;
 
     html += `
       <div class="attr-row">

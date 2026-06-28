@@ -89,6 +89,7 @@
     {
       "id": "shallow_mine", "name": "浅层矿洞", "icon": "🕳️", "desc": "刚深入地下的矿洞。",
       "requiredLevel": 8, "baseTime": 6500,
+      "unlock": { "type": "threatCleared", "areaId": "forest_edge" },
       "drops": [
         { "id": "iron_ore", "name": "铁矿", "icon": "⛏️", "xp": 40, "gold": 25, "weight": 55 },
         { "id": "tin_ore", "name": "锡矿", "icon": "🪨", "xp": 90, "gold": 65, "weight": 30 },
@@ -98,6 +99,7 @@
     {
       "id": "deep_mine", "name": "深层矿洞", "icon": "🕳️", "desc": "幽暗矿洞,蕴含贵金属。",
       "requiredLevel": 18, "baseTime": 8000,
+      "unlock": { "type": "threatCleared", "areaId": "mine_entrance" },
       "drops": [
         { "id": "tin_ore", "name": "锡矿", "icon": "🪨", "xp": 120, "gold": 90, "weight": 50 },
         { "id": "silver_ore", "name": "银矿", "icon": "⚪", "xp": 280, "gold": 240, "weight": 35 },
@@ -107,6 +109,7 @@
     {
       "id": "silver_vein", "name": "银矿脉", "icon": "⚪", "desc": "纯度极高的银矿。",
       "requiredLevel": 30, "baseTime": 9500,
+      "unlock": { "type": "threatCleared", "areaId": "mine_entrance" },
       "drops": [
         { "id": "silver_ore", "name": "银矿", "icon": "⚪", "xp": 350, "gold": 320, "weight": 50 },
         { "id": "gold_ore", "name": "金矿", "icon": "🪙", "xp": 800, "gold": 780, "weight": 35 },
@@ -116,6 +119,7 @@
     {
       "id": "gold_vein", "name": "金矿脉", "icon": "🪙", "desc": "闪闪发光的金矿脉。",
       "requiredLevel": 42, "baseTime": 11000,
+      "unlock": { "type": "threatCleared", "areaId": "wet_cave" },
       "drops": [
         { "id": "gold_ore", "name": "金矿", "icon": "🪙", "xp": 1000, "gold": 1000, "weight": 45 },
         { "id": "platinum_ore", "name": "铂矿", "icon": "⚪", "xp": 2500, "gold": 2900, "weight": 35 },
