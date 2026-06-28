@@ -173,6 +173,7 @@ function initializeGameSystems() {
     initFishingToggle,
     initGatherToggles,
     initBagTabs,
+    initSaveTools,
     initEquipment,
     initShop,
     initEndlessToggle,

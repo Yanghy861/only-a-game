@@ -161,4 +161,5 @@ function renderCharacter() {
   renderAttrs();
   renderBag();
   renderCharEquipped();
+  if (typeof renderSaveManager === 'function') renderSaveManager();
 }

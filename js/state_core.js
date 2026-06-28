@@ -3,7 +3,9 @@
    ============================================================ */
 
 const SAVE_KEY = 'fishing_epoch_save_v1';
+const SAVE_BACKUP_KEY = 'fishing_epoch_save_backups_v1';
 const SAVE_VERSION = 2;
+const SAVE_BACKUP_LIMIT = 5;
 
 // 默认初始状态
 function createDefaultState() {
@@ -391,14 +393,121 @@ function saveState() {
   state.settings.saveVersion = SAVE_VERSION;
   recalculateCharacterLevel();
   try {
-    localStorage.setItem(SAVE_KEY, JSON.stringify(state));
+    const raw = JSON.stringify(state);
+    localStorage.setItem(SAVE_KEY, raw);
+    recordSaveBackup(raw, '自动备份', { dedupe: true });
   } catch (e) {
     console.error('存档写入失败', e);
   }
 }
 
 function resetState() {
+  backupCurrentSave('重置前备份');
   localStorage.removeItem(SAVE_KEY);
   state = createDefaultState();
   recalculateCharacterLevel();
+  saveState();
+}
+
+function getSaveSummary(saveData = state) {
+  const combatStyleLevels = Object.values(saveData.combat?.styles || {}).map((s) => s.level || 1);
+  return {
+    level: saveData.character?.level || 1,
+    gold: saveData.character?.gold || 0,
+    fishing: saveData.fishing?.level || 1,
+    woodcutting: saveData.woodcutting?.level || 1,
+    mining: saveData.mining?.level || 1,
+    gemology: saveData.gemology?.level || 1,
+    combat: Math.max(saveData.combat?.level || 1, ...combatStyleLevels),
+    cards: saveData.cards?.craftLevel || 1,
+  };
+}
+
+function createExportPayload() {
+  state.settings.lastSaved = Date.now();
+  state.settings.saveVersion = SAVE_VERSION;
+  recalculateCharacterLevel();
+  return {
+    app: 'fishing_epoch',
+    version: 1,
+    exportedAt: Date.now(),
+    saveVersion: SAVE_VERSION,
+    summary: getSaveSummary(state),
+    state,
+  };
+}
+
+function exportSaveText() {
+  return JSON.stringify(createExportPayload(), null, 2);
+}
+
+function getSaveBackups() {
+  try {
+    const raw = localStorage.getItem(SAVE_BACKUP_KEY);
+    const list = raw ? JSON.parse(raw) : [];
+    return Array.isArray(list) ? list : [];
+  } catch (e) {
+    console.error('备份读取失败', e);
+    return [];
+  }
+}
+
+function writeSaveBackups(backups) {
+  localStorage.setItem(SAVE_BACKUP_KEY, JSON.stringify(backups.slice(0, SAVE_BACKUP_LIMIT)));
+}
+
+function recordSaveBackup(rawSave, label = '自动备份', options = {}) {
+  if (!rawSave) return null;
+  try {
+    const backups = getSaveBackups();
+    if (options.dedupe && backups[0]?.data === rawSave) return backups[0];
+    const parsed = JSON.parse(rawSave);
+    const entry = {
+      id: `${Date.now()}_${Math.random().toString(36).slice(2, 8)}`,
+      createdAt: Date.now(),
+      label,
+      saveVersion: parsed.settings?.saveVersion || SAVE_VERSION,
+      summary: getSaveSummary(parsed),
+      data: rawSave,
+    };
+    writeSaveBackups([entry, ...backups]);
+    return entry;
+  } catch (e) {
+    console.error('备份写入失败', e);
+    return null;
+  }
+}
+
+function backupCurrentSave(label = '手动备份') {
+  const raw = localStorage.getItem(SAVE_KEY) || JSON.stringify(state);
+  return recordSaveBackup(raw, label, { dedupe: false });
+}
+
+function normalizeImportedSave(parsed) {
+  if (!parsed || typeof parsed !== 'object') throw new Error('存档格式不正确');
+  const candidate = parsed.state && typeof parsed.state === 'object' ? parsed.state : parsed;
+  if (!candidate.character || !candidate.inventory || !candidate.settings) {
+    throw new Error('没有识别到有效的游戏存档');
+  }
+  return candidate;
+}
+
+function importSaveText(text) {
+  const parsed = JSON.parse(text);
+  const importedState = normalizeImportedSave(parsed);
+  backupCurrentSave('导入前备份');
+  localStorage.setItem(SAVE_KEY, JSON.stringify(importedState));
+  loadState();
+  saveState();
+  return getSaveSummary(state);
+}
+
+function restoreSaveBackup(backupId) {
+  const backup = getSaveBackups().find((entry) => entry.id === backupId);
+  if (!backup) throw new Error('找不到这个备份');
+  backupCurrentSave('恢复前备份');
+  localStorage.setItem(SAVE_KEY, backup.data);
+  loadState();
+  saveState();
+  return getSaveSummary(state);
 }

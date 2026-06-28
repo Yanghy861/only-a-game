@@ -1002,6 +1002,62 @@ body::before {
 }
 
 /* 属性列表 */
+.save-panel {
+  grid-column: 1 / -1;
+}
+
+.save-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+#saveFileInput {
+  display: none;
+}
+
+.save-backup-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.save-backup-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  background: rgba(232, 220, 192, 0.04);
+  border: 1px solid rgba(212, 160, 74, 0.18);
+  border-radius: var(--radius-sm);
+}
+
+.save-backup-main {
+  min-width: 0;
+}
+
+.save-backup-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--parchment-soft);
+  margin-bottom: 3px;
+}
+
+.save-backup-meta,
+.save-empty {
+  color: var(--parchment-dim);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.save-restore-btn {
+  flex-shrink: 0;
+  padding: 8px 14px;
+  font-size: 14px;
+}
+
 .attrs-list {
   display: flex;
   flex-direction: column;
@@ -1306,6 +1362,36 @@ body::before {
   display: flex;
   gap: 12px;
   justify-content: center;
+}
+
+.save-modal {
+  width: min(620px, calc(100vw - 32px));
+  max-width: 620px;
+  text-align: left;
+}
+
+.save-modal .modal-actions {
+  justify-content: flex-end;
+}
+
+.save-import-text {
+  width: 100%;
+  min-height: 220px;
+  margin-bottom: 16px;
+  padding: 12px;
+  resize: vertical;
+  color: var(--parchment-soft);
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--gold-deep);
+  border-radius: var(--radius-sm);
+  font-family: Consolas, 'Microsoft YaHei', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.save-import-text:focus {
+  outline: none;
+  border-color: var(--gold-bright);
 }
 
 /* ============================================================

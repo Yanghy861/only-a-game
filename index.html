@@ -701,6 +701,21 @@
             </div>
             <div class="equip-slots" id="charEquippedSlots"></div>
           </div>
+
+          <div class="panel save-panel">
+            <div class="panel-head">
+              <h2>存档管理</h2>
+              <span class="panel-sub">导出、导入和最近备份</span>
+            </div>
+            <div class="save-actions">
+              <button class="btn btn-primary" id="exportSaveBtn">导出存档</button>
+              <button class="btn btn-ghost" id="copySaveBtn">复制存档</button>
+              <button class="btn btn-ghost" id="importSaveBtn">导入文本</button>
+              <button class="btn btn-ghost" id="importSaveFileBtn">导入文件</button>
+              <input type="file" id="saveFileInput" accept=".json,application/json,text/plain">
+            </div>
+            <div class="save-backup-list" id="saveBackupList"></div>
+          </div>
         </div>
       </section>
     </main>
@@ -722,34 +737,47 @@
     </div>
   </div>
 
-  <script src="js/config-loader.js?v=architecture-20260628-1"></script>
-  <script src="js/data.js?v=architecture-20260628-1"></script>
-  <script src="js/state_core.js?v=architecture-20260628-1"></script>
-  <script src="js/inventory_state.js?v=architecture-20260628-1"></script>
-  <script src="js/skill_state.js?v=architecture-20260628-1"></script>
-  <script src="js/equipment_state.js?v=architecture-20260628-1"></script>
-  <script src="js/world_state.js?v=architecture-20260628-1"></script>
-  <script src="js/encyclopedia_state.js?v=architecture-20260628-1"></script>
-  <script src="js/cooking_state.js?v=architecture-20260628-1"></script>
-  <script src="js/combat_state.js?v=architecture-20260628-1"></script>
-  <script src="js/combat_equipment_state.js?v=architecture-20260628-1"></script>
-  <script src="js/gemology_state.js?v=architecture-20260628-1"></script>
-  <script src="js/cards_state.js?v=architecture-20260628-1"></script>
-  <script src="js/state.js?v=architecture-20260628-1"></script>
-  <script src="js/ui.js?v=architecture-20260628-1"></script>
-  <script src="js/fishing.js?v=architecture-20260628-1"></script>
-  <script src="js/gathering.js?v=architecture-20260628-1"></script>
-  <script src="js/equipment.js?v=architecture-20260628-1"></script>
-  <script src="js/cooking.js?v=architecture-20260628-1"></script>
-  <script src="js/combat.js?v=architecture-20260628-1"></script>
-  <script src="js/combat_equipment.js?v=architecture-20260628-1"></script>
-  <script src="js/gems.js?v=architecture-20260628-1"></script>
-  <script src="js/cards.js?v=architecture-20260628-1"></script>
-  <script src="js/inventory.js?v=architecture-20260628-1"></script>
-  <script src="js/shop.js?v=architecture-20260628-1"></script>
-  <script src="js/encyclopedia.js?v=architecture-20260628-1"></script>
-  <script src="js/character.js?v=architecture-20260628-1"></script>
-  <script src="js/game_systems.js?v=architecture-20260628-1"></script>
-  <script src="js/main.js?v=architecture-20260628-1"></script>
+  <div class="modal-mask" id="saveImportModal">
+    <div class="modal save-modal">
+      <h3>导入存档</h3>
+      <p>导入前会自动备份当前进度。请粘贴之前导出的完整存档文本。</p>
+      <textarea id="saveImportText" class="save-import-text" placeholder="粘贴导出的存档 JSON"></textarea>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" id="saveImportCancel">取消</button>
+        <button class="btn btn-primary" id="saveImportConfirm">确认导入</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/config-loader.js?v=save-safety-20260628-1"></script>
+  <script src="js/data.js?v=save-safety-20260628-1"></script>
+  <script src="js/state_core.js?v=save-safety-20260628-1"></script>
+  <script src="js/inventory_state.js?v=save-safety-20260628-1"></script>
+  <script src="js/skill_state.js?v=save-safety-20260628-1"></script>
+  <script src="js/equipment_state.js?v=save-safety-20260628-1"></script>
+  <script src="js/world_state.js?v=save-safety-20260628-1"></script>
+  <script src="js/encyclopedia_state.js?v=save-safety-20260628-1"></script>
+  <script src="js/cooking_state.js?v=save-safety-20260628-1"></script>
+  <script src="js/combat_state.js?v=save-safety-20260628-1"></script>
+  <script src="js/combat_equipment_state.js?v=save-safety-20260628-1"></script>
+  <script src="js/gemology_state.js?v=save-safety-20260628-1"></script>
+  <script src="js/cards_state.js?v=save-safety-20260628-1"></script>
+  <script src="js/state.js?v=save-safety-20260628-1"></script>
+  <script src="js/ui.js?v=save-safety-20260628-1"></script>
+  <script src="js/fishing.js?v=save-safety-20260628-1"></script>
+  <script src="js/gathering.js?v=save-safety-20260628-1"></script>
+  <script src="js/equipment.js?v=save-safety-20260628-1"></script>
+  <script src="js/cooking.js?v=save-safety-20260628-1"></script>
+  <script src="js/combat.js?v=save-safety-20260628-1"></script>
+  <script src="js/combat_equipment.js?v=save-safety-20260628-1"></script>
+  <script src="js/gems.js?v=save-safety-20260628-1"></script>
+  <script src="js/cards.js?v=save-safety-20260628-1"></script>
+  <script src="js/inventory.js?v=save-safety-20260628-1"></script>
+  <script src="js/shop.js?v=save-safety-20260628-1"></script>
+  <script src="js/encyclopedia.js?v=save-safety-20260628-1"></script>
+  <script src="js/character.js?v=save-safety-20260628-1"></script>
+  <script src="js/save_tools.js?v=save-safety-20260628-1"></script>
+  <script src="js/game_systems.js?v=save-safety-20260628-1"></script>
+  <script src="js/main.js?v=save-safety-20260628-1"></script>
 </body>
 </html>
