@@ -1,0 +1,1163 @@
+{
+  "story": [
+    {
+      "id": "ch1_1",
+      "chapter": 1,
+      "stage": 1,
+      "name": "森林入口",
+      "icon": "🌲",
+      "desc": "传说中的冒险开始了,森林边缘出现了一只史莱姆。",
+      "enemy": {
+        "id": "slime",
+        "name": "史莱姆",
+        "icon": "🟢",
+        "hp": 60,
+        "atk": 8,
+        "def": 2,
+        "spd": 5,
+        "element": "physical",
+        "drops": []
+      },
+      "rewardGold": 50,
+      "rewardXp": 40,
+      "rewardItem": null
+    },
+    {
+      "id": "ch1_2",
+      "chapter": 1,
+      "stage": 2,
+      "name": "密林深处",
+      "icon": "🌳",
+      "desc": "森林深处传来狼嚎,一只野狼挡住了去路。",
+      "enemy": {
+        "id": "wolf",
+        "name": "野狼",
+        "icon": "🐺",
+        "hp": 120,
+        "atk": 14,
+        "def": 4,
+        "spd": 12,
+        "element": "physical",
+        "drops": [
+          {
+            "id": "leather",
+            "count": 1,
+            "chance": 0.7
+          },
+          {
+            "id": "wolf_bone",
+            "count": 1,
+            "chance": 0.5
+          }
+        ]
+      },
+      "rewardGold": 100,
+      "rewardXp": 80,
+      "rewardItem": null
+    },
+    {
+      "id": "ch1_3",
+      "chapter": 1,
+      "stage": 3,
+      "name": "森林守护者",
+      "icon": "👹",
+      "desc": "森林的守护者出现了,击败它才能继续前进!",
+      "enemy": {
+        "id": "treant",
+        "name": "树精守护者",
+        "icon": "🌳",
+        "hp": 280,
+        "atk": 20,
+        "def": 12,
+        "spd": 6,
+        "element": "physical",
+        "drops": [
+          {
+            "id": "leather",
+            "count": 2,
+            "chance": 0.8
+          },
+          {
+            "id": "magic_dust",
+            "count": 1,
+            "chance": 0.3
+          }
+        ]
+      },
+      "rewardGold": 300,
+      "rewardXp": 200,
+      "rewardItem": {
+        "cat": "loot",
+        "id": "silver_ring",
+        "count": 1
+      }
+    },
+    {
+      "id": "ch2_1",
+      "chapter": 2,
+      "stage": 1,
+      "name": "矿洞入口",
+      "icon": "⛰️",
+      "desc": "穿过森林来到矿洞,一只哥布林向你扑来。",
+      "enemy": {
+        "id": "goblin",
+        "name": "哥布林",
+        "icon": "👺",
+        "hp": 400,
+        "atk": 30,
+        "def": 10,
+        "spd": 14,
+        "element": "physical",
+        "drops": [
+          {
+            "id": "leather",
+            "count": 1,
+            "chance": 0.6
+          },
+          {
+            "id": "wolf_bone",
+            "count": 1,
+            "chance": 0.4
+          }
+        ]
+      },
+      "rewardGold": 500,
+      "rewardXp": 350,
+      "rewardItem": null
+    },
+    {
+      "id": "ch2_2",
+      "chapter": 2,
+      "stage": 2,
+      "name": "矿洞深处",
+      "icon": "🕳️",
+      "desc": "矿洞深处,一只巨型蜘蛛盘踞在此。",
+      "enemy": {
+        "id": "spider",
+        "name": "巨型蜘蛛",
+        "icon": "🕷️",
+        "hp": 700,
+        "atk": 45,
+        "def": 15,
+        "spd": 18,
+        "element": "poison",
+        "drops": [
+          {
+            "id": "leather",
+            "count": 2,
+            "chance": 0.7
+          },
+          {
+            "id": "magic_dust",
+            "count": 1,
+            "chance": 0.4
+          }
+        ]
+      },
+      "rewardGold": 800,
+      "rewardXp": 550,
+      "rewardItem": null
+    },
+    {
+      "id": "ch2_3",
+      "chapter": 2,
+      "stage": 3,
+      "name": "矿洞之王",
+      "icon": "👑",
+      "desc": "矿洞深处的王,一只石头巨魔!",
+      "enemy": {
+        "id": "golem",
+        "name": "石头巨魔",
+        "icon": "🗿",
+        "hp": 1500,
+        "atk": 60,
+        "def": 35,
+        "spd": 5,
+        "element": "physical",
+        "drops": [
+          {
+            "id": "magic_dust",
+            "count": 2,
+            "chance": 0.5
+          },
+          {
+            "id": "wolf_bone",
+            "count": 2,
+            "chance": 0.6
+          }
+        ]
+      },
+      "rewardGold": 2000,
+      "rewardXp": 1200,
+      "rewardItem": {
+        "cat": "loot",
+        "id": "gold_ring",
+        "count": 1
+      }
+    },
+    {
+      "id": "ch3_1",
+      "chapter": 3,
+      "stage": 1,
+      "name": "古堡门前",
+      "icon": "🏰",
+      "desc": "一座古堡矗立眼前,门口的骷髅兵苏醒了。",
+      "enemy": {
+        "id": "skeleton",
+        "name": "骷髅兵",
+        "icon": "💀",
+        "hp": 2200,
+        "atk": 90,
+        "def": 40,
+        "spd": 16,
+        "element": "physical",
+        "drops": [
+          {
+            "id": "wolf_bone",
+            "count": 3,
+            "chance": 0.8
+          },
+          {
+            "id": "magic_dust",
+            "count": 1,
+            "chance": 0.5
+          }
+        ]
+      },
+      "rewardGold": 3000,
+      "rewardXp": 2000,
+      "rewardItem": null
+    },
+    {
+      "id": "ch3_2",
+      "chapter": 3,
+      "stage": 2,
+      "name": "古堡大厅",
+      "icon": "🩸",
+      "desc": "大厅中,一只吸血鬼正在等待。",
+      "enemy": {
+        "id": "vampire",
+        "name": "吸血鬼",
+        "icon": "🦇",
+        "hp": 4000,
+        "atk": 130,
+        "def": 50,
+        "spd": 22,
+        "element": "dark",
+        "drops": [
+          {
+            "id": "leather",
+            "count": 3,
+            "chance": 0.7
+          },
+          {
+            "id": "magic_dust",
+            "count": 2,
+            "chance": 0.6
+          }
+        ]
+      },
+      "rewardGold": 5000,
+      "rewardXp": 3500,
+      "rewardItem": null
+    },
+    {
+      "id": "ch3_3",
+      "chapter": 3,
+      "stage": 3,
+      "name": "古堡之主",
+      "icon": "🧛",
+      "desc": "古堡的主人,一位强大的亡灵法师!",
+      "enemy": {
+        "id": "necromancer",
+        "name": "亡灵法师",
+        "icon": "🧙",
+        "hp": 8000,
+        "atk": 180,
+        "def": 70,
+        "spd": 20,
+        "element": "dark",
+        "drops": [
+          {
+            "id": "magic_dust",
+            "count": 5,
+            "chance": 0.9
+          },
+          {
+            "id": "wolf_bone",
+            "count": 3,
+            "chance": 0.7
+          }
+        ]
+      },
+      "rewardGold": 10000,
+      "rewardXp": 7000,
+      "rewardItem": {
+        "cat": "loot",
+        "id": "gem_blue",
+        "count": 1
+      }
+    },
+    {
+      "id": "ch4_1",
+      "chapter": 4,
+      "stage": 1,
+      "name": "龙之谷",
+      "icon": "🌋",
+      "desc": "传说中的龙之谷,一只幼龙正在巡游。",
+      "enemy": {
+        "id": "wyvern",
+        "name": "幼龙",
+        "icon": "🐲",
+        "hp": 14000,
+        "atk": 260,
+        "def": 100,
+        "spd": 25,
+        "element": "fire",
+        "drops": [
+          {
+            "id": "dragon_scale",
+            "count": 1,
+            "chance": 0.5
+          },
+          {
+            "id": "magic_dust",
+            "count": 3,
+            "chance": 0.8
+          }
+        ]
+      },
+      "rewardGold": 18000,
+      "rewardXp": 12000,
+      "rewardItem": null
+    },
+    {
+      "id": "ch4_2",
+      "chapter": 4,
+      "stage": 2,
+      "name": "熔岩之心",
+      "icon": "🔥",
+      "desc": "熔岩深处,一只火焰元素在燃烧。",
+      "enemy": {
+        "id": "fire_elem",
+        "name": "火焰元素",
+        "icon": "🔥",
+        "hp": 22000,
+        "atk": 380,
+        "def": 120,
+        "spd": 30,
+        "element": "fire",
+        "drops": [
+          {
+            "id": "magic_dust",
+            "count": 5,
+            "chance": 0.9
+          },
+          {
+            "id": "dragon_scale",
+            "count": 1,
+            "chance": 0.3
+          }
+        ]
+      },
+      "rewardGold": 30000,
+      "rewardXp": 20000,
+      "rewardItem": null
+    },
+    {
+      "id": "ch4_3",
+      "chapter": 4,
+      "stage": 3,
+      "name": "巨龙之巢",
+      "icon": "🐉",
+      "desc": "最终之战!远古巨龙苏醒了!",
+      "enemy": {
+        "id": "dragon",
+        "name": "远古巨龙",
+        "icon": "🐉",
+        "hp": 50000,
+        "atk": 600,
+        "def": 200,
+        "spd": 28,
+        "element": "fire",
+        "drops": [
+          {
+            "id": "dragon_scale",
+            "count": 3,
+            "chance": 1
+          },
+          {
+            "id": "magic_dust",
+            "count": 8,
+            "chance": 1
+          }
+        ]
+      },
+      "rewardGold": 80000,
+      "rewardXp": 50000,
+      "rewardItem": {
+        "cat": "loot",
+        "id": "gem_red",
+        "count": 1
+      }
+    }
+  ],
+  "endless": [
+    {
+      "id": "endless_tower",
+      "name": "无尽塔",
+      "icon": "🗼",
+      "desc": "无限挑战,层数越高敌人越强,挂机自动战斗。",
+      "baseEnemyHp": 80,
+      "baseEnemyAtk": 10,
+      "baseEnemyDef": 3,
+      "baseEnemySpd": 8,
+      "hpGrowth": 1.12,
+      "atkGrowth": 1.08,
+      "defGrowth": 1.06,
+      "spdGrowth": 1.02,
+      "goldPerFloor": 15,
+      "xpPerFloor": 10,
+      "goldGrowth": 1.05,
+      "xpGrowth": 1.05,
+      "dropChance": 0.3,
+      "dropTable": [
+        {
+          "id": "leather",
+          "weight": 30
+        },
+        {
+          "id": "wolf_bone",
+          "weight": 30
+        },
+        {
+          "id": "magic_dust",
+          "weight": 25
+        },
+        {
+          "id": "dragon_scale",
+          "weight": 15
+        }
+      ]
+    }
+  ],
+  "manual": [
+    {
+      "id": "boss_forest_warden",
+      "name": "林地守卫",
+      "icon": "🌲",
+      "desc": "守护林地炉火的古老树灵,击败后开启木炭与基础烹饪炉。",
+      "enemy": {
+        "id": "forest_warden",
+        "name": "林地守卫",
+        "icon": "🌲",
+        "hp": 900,
+        "atk": 26,
+        "def": 12,
+        "spd": 8,
+        "element": "physical",
+        "drops": [
+          {
+            "id": "leather",
+            "count": 2,
+            "chance": 0.8
+          },
+          {
+            "id": "magic_dust",
+            "count": 1,
+            "chance": 0.25
+          }
+        ]
+      },
+      "rewardGold": 1200,
+      "rewardXp": 700,
+      "rewardItem": {
+        "cat": "loot",
+        "id": "leather",
+        "count": 3
+      },
+      "unlocks": [
+        {
+          "type": "feature",
+          "id": "charcoal_making",
+          "text": "木炭制作"
+        },
+        {
+          "type": "feature",
+          "id": "basic_cooking_stove",
+          "text": "基础烹饪炉"
+        },
+        {
+          "type": "recipe",
+          "id": "charcoal_from_logs",
+          "text": "木材加工为木炭"
+        }
+      ]
+    },
+    {
+      "id": "boss_river_catfish",
+      "name": "河湾巨鲶",
+      "icon": "🐟",
+      "desc": "盘踞河湾的巨型鲶鱼,击败后让鱼类正式进入战斗补给链。",
+      "requires": [
+        {
+          "type": "bossCleared",
+          "id": "boss_forest_warden"
+        }
+      ],
+      "enemy": {
+        "id": "river_catfish",
+        "name": "河湾巨鲶",
+        "icon": "🐟",
+        "hp": 1400,
+        "atk": 34,
+        "def": 16,
+        "spd": 9,
+        "element": "physical",
+        "drops": [
+          {
+            "id": "leather",
+            "count": 2,
+            "chance": 0.7
+          },
+          {
+            "id": "wolf_bone",
+            "count": 1,
+            "chance": 0.35
+          }
+        ]
+      },
+      "rewardGold": 1800,
+      "rewardXp": 1000,
+      "rewardItem": {
+        "cat": "loot",
+        "id": "pearl",
+        "count": 2
+      },
+      "unlocks": [
+        {
+          "type": "feature",
+          "id": "combat_food",
+          "text": "战斗食物补给"
+        },
+        {
+          "type": "recipe",
+          "id": "grilled_fish_rations",
+          "text": "基础战斗食物"
+        },
+        {
+          "type": "area",
+          "id": "river_supply",
+          "text": "河流补给任务"
+        }
+      ]
+    },
+    {
+      "id": "boss_mine_overseer",
+      "name": "矿洞监工",
+      "icon": "⛏️",
+      "desc": "矿洞深处的铁腕监工,击败后开启冶炼炉与金属锭路线。",
+      "requires": [
+        {
+          "type": "bossCleared",
+          "id": "boss_river_catfish"
+        }
+      ],
+      "enemy": {
+        "id": "mine_overseer",
+        "name": "矿洞监工",
+        "icon": "👷",
+        "hp": 2300,
+        "atk": 48,
+        "def": 26,
+        "spd": 10,
+        "element": "physical",
+        "drops": [
+          {
+            "id": "leather",
+            "count": 3,
+            "chance": 0.7
+          },
+          {
+            "id": "magic_dust",
+            "count": 1,
+            "chance": 0.35
+          }
+        ]
+      },
+      "rewardGold": 2800,
+      "rewardXp": 1800,
+      "rewardItem": {
+        "cat": "loot",
+        "id": "wolf_bone",
+        "count": 2
+      },
+      "unlocks": [
+        {
+          "type": "feature",
+          "id": "smelting_furnace",
+          "text": "冶炼炉"
+        },
+        {
+          "type": "recipe",
+          "id": "copper_bar",
+          "text": "铜锭冶炼"
+        },
+        {
+          "type": "recipe",
+          "id": "iron_bar",
+          "text": "铁锭冶炼"
+        }
+      ]
+    },
+    {
+      "id": "boss_goblin_king",
+      "name": "哥布林王之门",
+      "icon": "🚪",
+      "desc": "哥布林王的巢穴入口,击败它将开启钢制工具与中期装备路线。",
+      "requires": [
+        {
+          "type": "bossCleared",
+          "id": "boss_mine_overseer"
+        }
+      ],
+      "enemy": {
+        "id": "goblin_king",
+        "name": "哥布林之王",
+        "icon": "👑",
+        "hp": 5000,
+        "atk": 80,
+        "def": 30,
+        "spd": 15,
+        "enrageAt": 0.5,
+        "enrageMult": 1.5,
+        "element": "physical",
+        "drops": [
+          {
+            "id": "leather",
+            "count": 5,
+            "chance": 1
+          },
+          {
+            "id": "magic_dust",
+            "count": 3,
+            "chance": 0.8
+          }
+        ]
+      },
+      "rewardGold": 5000,
+      "rewardXp": 3000,
+      "rewardItem": {
+        "cat": "loot",
+        "id": "silver_ring",
+        "count": 2
+      },
+      "rewardCombatEquip": "r_goblin_king_signet",
+      "unlocks": [
+        {
+          "type": "equip",
+          "id": "w_steel_sword",
+          "text": "钢剑打造"
+        },
+        {
+          "type": "equip",
+          "id": "h_steel_helm",
+          "text": "钢盔打造"
+        },
+        {
+          "type": "equip",
+          "id": "a_steel_armor",
+          "text": "钢甲打造"
+        },
+        {
+          "type": "spot",
+          "id": "deep_mine",
+          "text": "深层矿洞采矿点"
+        }
+      ]
+    },
+    {
+      "id": "boss_heartwood",
+      "name": "古树之心",
+      "icon": "🌳",
+      "desc": "古树核心苏醒,击败后开启高级木材加工和武器胚体。",
+      "requires": [
+        {
+          "type": "bossCleared",
+          "id": "boss_goblin_king"
+        }
+      ],
+      "enemy": {
+        "id": "heartwood",
+        "name": "古树之心",
+        "icon": "🌳",
+        "hp": 8500,
+        "atk": 115,
+        "def": 55,
+        "spd": 8,
+        "element": "physical",
+        "drops": [
+          {
+            "id": "magic_dust",
+            "count": 3,
+            "chance": 0.7
+          },
+          {
+            "id": "leather",
+            "count": 4,
+            "chance": 0.8
+          }
+        ]
+      },
+      "rewardGold": 8000,
+      "rewardXp": 5000,
+      "rewardItem": {
+        "cat": "loot",
+        "id": "magic_dust",
+        "count": 3
+      },
+      "unlocks": [
+        {
+          "type": "feature",
+          "id": "woodworking",
+          "text": "高级木材加工"
+        },
+        {
+          "type": "recipe",
+          "id": "weapon_handle",
+          "text": "武器木柄"
+        },
+        {
+          "type": "recipe",
+          "id": "bow_stave",
+          "text": "弓胚制作"
+        }
+      ]
+    },
+    {
+      "id": "boss_swamp_spider",
+      "name": "沼泽毒蛛",
+      "icon": "🕷️",
+      "desc": "毒雾沼泽的捕食者,击败后开启解毒补给和炼金雏形。",
+      "requires": [
+        {
+          "type": "bossCleared",
+          "id": "boss_heartwood"
+        }
+      ],
+      "enemy": {
+        "id": "swamp_spider",
+        "name": "沼泽毒蛛",
+        "icon": "🕷️",
+        "hp": 12000,
+        "atk": 150,
+        "def": 45,
+        "spd": 24,
+        "enrageAt": 0.35,
+        "enrageMult": 1.6,
+        "element": "poison",
+        "drops": [
+          {
+            "id": "leather",
+            "count": 5,
+            "chance": 0.9
+          },
+          {
+            "id": "magic_dust",
+            "count": 4,
+            "chance": 0.65
+          }
+        ]
+      },
+      "rewardGold": 12000,
+      "rewardXp": 8000,
+      "rewardItem": {
+        "cat": "loot",
+        "id": "magic_dust",
+        "count": 4
+      },
+      "unlocks": [
+        {
+          "type": "feature",
+          "id": "alchemy_basic",
+          "text": "基础炼金"
+        },
+        {
+          "type": "recipe",
+          "id": "antidote_meal",
+          "text": "解毒食物"
+        },
+        {
+          "type": "area",
+          "id": "swamp_garden",
+          "text": "沼泽药草线"
+        }
+      ]
+    },
+    {
+      "id": "boss_coral_queen",
+      "name": "珊瑚女王",
+      "icon": "🪸",
+      "desc": "珊瑚礁深处的女王,击败后让水域材料进入饰品制作。",
+      "requires": [
+        {
+          "type": "bossCleared",
+          "id": "boss_swamp_spider"
+        }
+      ],
+      "enemy": {
+        "id": "coral_queen",
+        "name": "珊瑚女王",
+        "icon": "🪸",
+        "hp": 17000,
+        "atk": 170,
+        "def": 70,
+        "spd": 18,
+        "element": "ice",
+        "drops": [
+          {
+            "id": "magic_dust",
+            "count": 5,
+            "chance": 0.8
+          },
+          {
+            "id": "leather",
+            "count": 4,
+            "chance": 0.5
+          }
+        ]
+      },
+      "rewardGold": 16000,
+      "rewardXp": 10000,
+      "rewardItem": {
+        "cat": "loot",
+        "id": "pearl",
+        "count": 5
+      },
+      "unlocks": [
+        {
+          "type": "feature",
+          "id": "jewelry_crafting",
+          "text": "饰品制作"
+        },
+        {
+          "type": "recipe",
+          "id": "pearl_amulet",
+          "text": "珍珠项链路线"
+        },
+        {
+          "type": "area",
+          "id": "reef_materials",
+          "text": "珊瑚礁材料用途"
+        }
+      ]
+    },
+    {
+      "id": "boss_shadow_lord",
+      "name": "暗影之领主",
+      "icon": "🌑",
+      "desc": "暗影领主的巢穴,击败它将开启秘银装备与深渊宝石洞的通路。",
+      "requires": [
+        {
+          "type": "bossCleared",
+          "id": "boss_coral_queen"
+        }
+      ],
+      "enemy": {
+        "id": "shadow_lord",
+        "name": "暗影领主",
+        "icon": "👤",
+        "hp": 24000,
+        "atk": 210,
+        "def": 80,
+        "spd": 25,
+        "enrageAt": 0.3,
+        "enrageMult": 1.8,
+        "element": "dark",
+        "drops": [
+          {
+            "id": "magic_dust",
+            "count": 8,
+            "chance": 1
+          },
+          {
+            "id": "dragon_scale",
+            "count": 2,
+            "chance": 0.35
+          }
+        ]
+      },
+      "rewardGold": 24000,
+      "rewardXp": 14000,
+      "rewardItem": {
+        "cat": "loot",
+        "id": "gold_ring",
+        "count": 1
+      },
+      "rewardCombatEquip": "a_shadow_cloak",
+      "unlocks": [
+        {
+          "type": "equip",
+          "id": "w_mithril_blade",
+          "text": "秘银之刃打造"
+        },
+        {
+          "type": "equip",
+          "id": "h_mithril_helm",
+          "text": "秘银盔打造"
+        },
+        {
+          "type": "equip",
+          "id": "a_mithril_armor",
+          "text": "秘银甲打造"
+        },
+        {
+          "type": "spot",
+          "id": "gem_abyss",
+          "text": "深渊宝石洞"
+        }
+      ]
+    },
+    {
+      "id": "boss_forge_colossus",
+      "name": "熔炉巨像",
+      "icon": "🔥",
+      "desc": "熔炉中诞生的巨像,击败后开启精金锻造和高级冶炼效率。",
+      "requires": [
+        {
+          "type": "bossCleared",
+          "id": "boss_shadow_lord"
+        }
+      ],
+      "enemy": {
+        "id": "forge_colossus",
+        "name": "熔炉巨像",
+        "icon": "🗿",
+        "hp": 36000,
+        "atk": 280,
+        "def": 150,
+        "spd": 9,
+        "enrageAt": 0.4,
+        "enrageMult": 1.7,
+        "element": "fire",
+        "drops": [
+          {
+            "id": "magic_dust",
+            "count": 8,
+            "chance": 0.9
+          },
+          {
+            "id": "dragon_scale",
+            "count": 2,
+            "chance": 0.45
+          }
+        ]
+      },
+      "rewardGold": 36000,
+      "rewardXp": 22000,
+      "rewardItem": {
+        "cat": "loot",
+        "id": "magic_dust",
+        "count": 8
+      },
+      "unlocks": [
+        {
+          "type": "feature",
+          "id": "adamant_smithing",
+          "text": "精金锻造"
+        },
+        {
+          "type": "recipe",
+          "id": "adamant_bar",
+          "text": "精金锭冶炼"
+        },
+        {
+          "type": "feature",
+          "id": "advanced_smelting",
+          "text": "高级冶炼效率"
+        }
+      ]
+    },
+    {
+      "id": "boss_drowned_captain",
+      "name": "沉船船长",
+      "icon": "🚢",
+      "desc": "沉船墓地的亡魂船长,击败后开启沉船钓点和水域宝箱强化。",
+      "requires": [
+        {
+          "type": "bossCleared",
+          "id": "boss_forge_colossus"
+        }
+      ],
+      "enemy": {
+        "id": "drowned_captain",
+        "name": "沉船船长",
+        "icon": "💀",
+        "hp": 50000,
+        "atk": 330,
+        "def": 130,
+        "spd": 22,
+        "enrageAt": 0.35,
+        "enrageMult": 1.8,
+        "element": "dark",
+        "drops": [
+          {
+            "id": "magic_dust",
+            "count": 10,
+            "chance": 1
+          },
+          {
+            "id": "dragon_scale",
+            "count": 2,
+            "chance": 0.55
+          }
+        ]
+      },
+      "rewardGold": 52000,
+      "rewardXp": 32000,
+      "rewardItem": {
+        "cat": "loot",
+        "id": "gem_blue",
+        "count": 1
+      },
+      "unlocks": [
+        {
+          "type": "spot",
+          "id": "wreck",
+          "text": "沉船墓地钓点"
+        },
+        {
+          "type": "feature",
+          "id": "water_chest_upgrade",
+          "text": "水域宝箱强化"
+        },
+        {
+          "type": "area",
+          "id": "shipwreck_routes",
+          "text": "沉船路线"
+        }
+      ]
+    },
+    {
+      "id": "boss_ancient_dragon",
+      "name": "远古巨龙之巢",
+      "icon": "🐉",
+      "desc": "远古巨龙的巢穴,击败它将开启深渊裂隙与龙族装备打造。",
+      "requires": [
+        {
+          "type": "bossCleared",
+          "id": "boss_drowned_captain"
+        }
+      ],
+      "enemy": {
+        "id": "ancient_dragon",
+        "name": "远古巨龙",
+        "icon": "🐉",
+        "hp": 85000,
+        "atk": 460,
+        "def": 180,
+        "spd": 30,
+        "enrageAt": 0.3,
+        "enrageMult": 2,
+        "element": "fire",
+        "drops": [
+          {
+            "id": "dragon_scale",
+            "count": 5,
+            "chance": 1
+          },
+          {
+            "id": "magic_dust",
+            "count": 15,
+            "chance": 1
+          }
+        ]
+      },
+      "rewardGold": 90000,
+      "rewardXp": 55000,
+      "rewardItem": {
+        "cat": "loot",
+        "id": "gem_red",
+        "count": 1
+      },
+      "rewardCombatEquip": "am_ancient_dragon_heart",
+      "unlocks": [
+        {
+          "type": "equip",
+          "id": "w_dragon_slayer",
+          "text": "屠龙剑打造"
+        },
+        {
+          "type": "equip",
+          "id": "a_dragon_armor",
+          "text": "龙鳞甲打造"
+        },
+        {
+          "type": "spot",
+          "id": "abyss",
+          "text": "深渊裂隙钓点"
+        }
+      ]
+    },
+    {
+      "id": "boss_void_gatekeeper",
+      "name": "虚空守门人",
+      "icon": "🌌",
+      "desc": "守在现实与虚空边界的最终门卫,击败后开启终局资源路线。",
+      "requires": [
+        {
+          "type": "bossCleared",
+          "id": "boss_ancient_dragon"
+        }
+      ],
+      "enemy": {
+        "id": "void_gatekeeper",
+        "name": "虚空守门人",
+        "icon": "🌌",
+        "hp": 140000,
+        "atk": 650,
+        "def": 260,
+        "spd": 34,
+        "enrageAt": 0.25,
+        "enrageMult": 2.2,
+        "element": "dark",
+        "drops": [
+          {
+            "id": "dragon_scale",
+            "count": 8,
+            "chance": 1
+          },
+          {
+            "id": "magic_dust",
+            "count": 25,
+            "chance": 1
+          }
+        ]
+      },
+      "rewardGold": 160000,
+      "rewardXp": 100000,
+      "rewardItem": {
+        "cat": "loot",
+        "id": "gem_red",
+        "count": 2
+      },
+      "unlocks": [
+        {
+          "type": "area",
+          "id": "void_endgame",
+          "text": "终局区域"
+        },
+        {
+          "type": "feature",
+          "id": "void_equipment",
+          "text": "虚空装备路线"
+        },
+        {
+          "type": "feature",
+          "id": "stellar_resources",
+          "text": "星辰资源线"
+        }
+      ]
+    }
+  ]
+}

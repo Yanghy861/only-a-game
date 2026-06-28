@@ -1,0 +1,1 @@
+﻿/* Legacy state module intentionally left as a thin compatibility placeholder. */

@@ -1,0 +1,391 @@
+{
+  "recipes": [
+    {
+      "id": "grilled_minnow",
+      "name": "烤小鱼",
+      "icon": "🐟",
+      "desc": "速度+10% · 5分钟",
+      "duration": 300000,
+      "buff": {
+        "type": "speed",
+        "value": 0.1
+      },
+      "recipe": {
+        "minnow": 3
+      }
+    },
+    {
+      "id": "crucian_soup",
+      "name": "鲫鱼汤",
+      "icon": "🍲",
+      "desc": "经验+15% · 5分钟",
+      "duration": 300000,
+      "buff": {
+        "type": "xp",
+        "value": 0.15
+      },
+      "recipe": {
+        "crucian": 3
+      }
+    },
+    {
+      "id": "carp_sashimi",
+      "name": "鲤鱼刺身",
+      "icon": "🍣",
+      "desc": "金币+15% · 5分钟",
+      "duration": 300000,
+      "buff": {
+        "type": "gold",
+        "value": 0.15
+      },
+      "recipe": {
+        "carp": 3
+      }
+    },
+    {
+      "id": "goldfish_feast",
+      "name": "金鱼宴",
+      "icon": "🐡",
+      "desc": "幸运+10% · 5分钟",
+      "duration": 300000,
+      "buff": {
+        "type": "rarity",
+        "value": 0.1
+      },
+      "recipe": {
+        "carp": 2
+      }
+    },
+    {
+      "id": "trout_steak",
+      "name": "鳟鱼排",
+      "icon": "🐟",
+      "desc": "速度+15% · 6分钟",
+      "duration": 360000,
+      "buff": {
+        "type": "speed",
+        "value": 0.15
+      },
+      "recipe": {
+        "trout": 4,
+        "perch": 2
+      }
+    },
+    {
+      "id": "salmon_grill",
+      "name": "烤鲑鱼",
+      "icon": "🐠",
+      "desc": "金币+20% · 6分钟",
+      "duration": 360000,
+      "buff": {
+        "type": "gold",
+        "value": 0.2
+      },
+      "recipe": {
+        "salmon": 4
+      }
+    },
+    {
+      "id": "eel_broth",
+      "name": "鳗鱼汤",
+      "icon": "🐍",
+      "desc": "经验+20% · 6分钟",
+      "duration": 360000,
+      "buff": {
+        "type": "xp",
+        "value": 0.2
+      },
+      "recipe": {
+        "eel": 3
+      }
+    },
+    {
+      "id": "pike_fillet",
+      "name": "梭鱼片",
+      "icon": "🐟",
+      "desc": "速度+20% · 7分钟",
+      "duration": 420000,
+      "buff": {
+        "type": "speed",
+        "value": 0.2
+      },
+      "recipe": {
+        "pike": 4,
+        "bass": 2
+      }
+    },
+    {
+      "id": "catfish_stew",
+      "name": "鲶鱼炖菜",
+      "icon": "🍲",
+      "desc": "经验+25% · 7分钟",
+      "duration": 420000,
+      "buff": {
+        "type": "xp",
+        "value": 0.25
+      },
+      "recipe": {
+        "catfish": 4
+      }
+    },
+    {
+      "id": "sturgeon_caviar",
+      "name": "鲟鱼酱",
+      "icon": "🐡",
+      "desc": "金币+30% · 7分钟",
+      "duration": 420000,
+      "buff": {
+        "type": "gold",
+        "value": 0.3
+      },
+      "recipe": {
+        "sturgeon": 3
+      }
+    },
+    {
+      "id": "bighead_feast",
+      "name": "鳙鱼大餐",
+      "icon": "🐟",
+      "desc": "速度+25% · 8分钟",
+      "duration": 480000,
+      "buff": {
+        "type": "speed",
+        "value": 0.25
+      },
+      "recipe": {
+        "carp": 6
+      }
+    },
+    {
+      "id": "golden_carp_sushi",
+      "name": "黄金鲤寿司",
+      "icon": "🍣",
+      "desc": "金币+35% · 8分钟",
+      "duration": 480000,
+      "buff": {
+        "type": "gold",
+        "value": 0.35
+      },
+      "recipe": {
+        "carp": 2
+      }
+    },
+    {
+      "id": "river_monster_soup",
+      "name": "河怪汤",
+      "icon": "🐊",
+      "desc": "经验+30% · 8分钟",
+      "duration": 480000,
+      "buff": {
+        "type": "xp",
+        "value": 0.3
+      },
+      "recipe": {
+        "pike": 3
+      }
+    },
+    {
+      "id": "tarpon_steak",
+      "name": "大海鲢排",
+      "icon": "🐟",
+      "desc": "速度+30% · 9分钟",
+      "duration": 540000,
+      "buff": {
+        "type": "speed",
+        "value": 0.3
+      },
+      "recipe": {
+        "tarpon": 4,
+        "mullet": 2
+      }
+    },
+    {
+      "id": "sawfish_soup",
+      "name": "锯鳐汤",
+      "icon": "🐊",
+      "desc": "幸运+25% · 9分钟",
+      "duration": 540000,
+      "buff": {
+        "type": "rarity",
+        "value": 0.25
+      },
+      "recipe": {
+        "sawfish": 2
+      }
+    },
+    {
+      "id": "tuna_steak",
+      "name": "金枪鱼排",
+      "icon": "🐠",
+      "desc": "速度+35% · 10分钟",
+      "duration": 600000,
+      "buff": {
+        "type": "speed",
+        "value": 0.35
+      },
+      "recipe": {
+        "tuna": 5,
+        "mackerel": 3
+      }
+    },
+    {
+      "id": "swordfish_grill",
+      "name": "烤剑鱼",
+      "icon": "🐡",
+      "desc": "金币+40% · 10分钟",
+      "duration": 600000,
+      "buff": {
+        "type": "gold",
+        "value": 0.4
+      },
+      "recipe": {
+        "swordfish": 4
+      }
+    },
+    {
+      "id": "shark_fin",
+      "name": "鲨鱼翅",
+      "icon": "🦈",
+      "desc": "经验+40% · 10分钟",
+      "duration": 600000,
+      "buff": {
+        "type": "xp",
+        "value": 0.4
+      },
+      "recipe": {
+        "shark": 3
+      }
+    },
+    {
+      "id": "kraken_feast",
+      "name": "海怪盛宴",
+      "icon": "🐙",
+      "desc": "全属性+20% · 10分钟",
+      "duration": 600000,
+      "buff": {
+        "type": "all",
+        "value": 0.2
+      },
+      "recipe": {
+        "kraken": 2
+      }
+    },
+    {
+      "id": "reef_platter",
+      "name": "珊瑚拼盘",
+      "icon": "🪸",
+      "desc": "速度+40% · 11分钟",
+      "duration": 660000,
+      "buff": {
+        "type": "speed",
+        "value": 0.4
+      },
+      "recipe": {
+        "parrotfish": 4,
+        "angelfish": 3
+      }
+    },
+    {
+      "id": "turtle_soup",
+      "name": "海龟汤",
+      "icon": "🐢",
+      "desc": "经验+45% · 11分钟",
+      "duration": 660000,
+      "buff": {
+        "type": "xp",
+        "value": 0.45
+      },
+      "recipe": {
+        "parrotfish": 2
+      }
+    },
+    {
+      "id": "reef_spirit_dish",
+      "name": "礁灵料理",
+      "icon": "✨",
+      "desc": "全属性+30% · 11分钟",
+      "duration": 660000,
+      "buff": {
+        "type": "all",
+        "value": 0.3
+      },
+      "recipe": {
+        "reef_spirit": 1
+      }
+    },
+    {
+      "id": "abyss_sushi",
+      "name": "深渊寿司",
+      "icon": "🍣",
+      "desc": "速度+50% · 12分钟",
+      "duration": 720000,
+      "buff": {
+        "type": "speed",
+        "value": 0.5
+      },
+      "recipe": {
+        "anglerfish": 5,
+        "viperfish": 3
+      }
+    },
+    {
+      "id": "leviathan_feast",
+      "name": "利维坦宴",
+      "icon": "🐲",
+      "desc": "全属性+40% · 12分钟",
+      "duration": 720000,
+      "buff": {
+        "type": "all",
+        "value": 0.4
+      },
+      "recipe": {
+        "leviathan": 2
+      }
+    },
+    {
+      "id": "ghost_banquet",
+      "name": "幽灵宴会",
+      "icon": "👻",
+      "desc": "全属性+50% · 13分钟",
+      "duration": 780000,
+      "buff": {
+        "type": "all",
+        "value": 0.5
+      },
+      "recipe": {
+        "captain_ghost": 2,
+        "ghost_fish": 5
+      }
+    },
+    {
+      "id": "void_delicacy",
+      "name": "虚空珍馐",
+      "icon": "🌌",
+      "desc": "全属性+60% · 14分钟",
+      "duration": 840000,
+      "buff": {
+        "type": "all",
+        "value": 0.6
+      },
+      "recipe": {
+        "void_king": 1,
+        "void_horror": 3
+      }
+    },
+    {
+      "id": "creation_feast",
+      "name": "创世者盛宴",
+      "icon": "🌟",
+      "desc": "全属性+80% · 15分钟",
+      "duration": 900000,
+      "buff": {
+        "type": "all",
+        "value": 0.8
+      },
+      "recipe": {
+        "creator": 1,
+        "void_king": 3
+      }
+    }
+  ]
+}

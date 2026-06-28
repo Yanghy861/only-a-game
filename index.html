@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>垂钓纪元 · 放置冒险</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- 顶部状态栏 -->
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-mark">⚓</span>
+        <div class="brand-text">
+          <h1>垂钓纪元</h1>
+          <span class="brand-sub">放置冒险</span>
+        </div>
+      </div>
+
+      <div class="status-cluster">
+        <div class="status-chip gold-chip" title="金币">
+          <span class="chip-icon">🪙</span>
+          <span class="chip-value" id="goldValue">0</span>
+        </div>
+        <div class="skill-chips" id="skillChips">
+          <div class="status-chip skill-chip" title="钓鱼等级">
+            <span class="chip-icon">🎣</span>
+            <span class="chip-value" id="fishLevelValue">1</span>
+          </div>
+          <div class="status-chip skill-chip" title="伐木等级">
+            <span class="chip-icon">🪓</span>
+            <span class="chip-value" id="woodLevelValue">1</span>
+          </div>
+          <div class="status-chip skill-chip" title="采矿等级">
+            <span class="chip-icon">⛏️</span>
+            <span class="chip-value" id="mineLevelValue">1</span>
+          </div>
+          <div class="status-chip skill-chip" title="烹饪(无等级)">
+            <span class="chip-icon">🍳</span>
+            <span class="chip-value" id="cookLevelValue">-</span>
+          </div>
+          <div class="status-chip skill-chip" title="宝石等级">
+            <span class="chip-icon">💎</span>
+            <span class="chip-value" id="gemLevelValue">1</span>
+          </div>
+          <div class="status-chip skill-chip" title="制卡等级">
+            <span class="chip-icon">🃏</span>
+            <span class="chip-value" id="cardLevelValue">1</span>
+          </div>
+          <div class="status-chip skill-chip" title="战斗等级">
+            <span class="chip-icon">⚔️</span>
+            <span class="chip-value" id="combatLevelValue">1</span>
+          </div>
+        </div>
+        <button class="icon-btn speed-btn" id="speedBtn" title="切换10倍速(测试用)">×1</button>
+        <button class="icon-btn" id="resetBtn" title="重置存档">↺</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 天气时段栏 -->
+  <div class="weather-bar" id="weatherBar">
+    <div class="weather-info" id="weatherInfo">☀️ 晴朗</div>
+    <div class="time-info" id="timeInfo">☀️ 白天</div>
+    <div class="buff-info" id="buffInfo"></div>
+  </div>
+
+  <!-- 主体布局 -->
+  <div class="layout">
+    <!-- 左侧导航 -->
+    <nav class="sidebar sidebar-compact">
+      <div class="nav-group">
+        <div class="nav-group-title">挂机</div>
+        <button class="nav-item active" data-tab="fishing">
+          <span class="nav-label">钓鱼</span>
+          <span class="nav-level" data-skill="fishing">1</span>
+        </button>
+        <button class="nav-item" data-tab="woodcutting">
+          <span class="nav-label">伐木</span>
+          <span class="nav-level" data-skill="woodcutting">1</span>
+        </button>
+        <button class="nav-item" data-tab="mining">
+          <span class="nav-label">采矿</span>
+          <span class="nav-level" data-skill="mining">1</span>
+        </button>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-title">制作</div>
+        <button class="nav-item" data-tab="equipment">
+          <span class="nav-label">装备</span>
+        </button>
+        <button class="nav-item" data-tab="cooking">
+          <span class="nav-label">烹饪</span>
+        </button>
+        <button class="nav-item" data-tab="gems">
+          <span class="nav-label">宝石</span>
+          <span class="nav-level" data-skill="gemology">1</span>
+        </button>
+        <button class="nav-item" data-tab="cards">
+          <span class="nav-label">卡片</span>
+          <span class="nav-level" data-skill="cards">1</span>
+        </button>
+        <button class="nav-item" data-tab="combat_equip">
+          <span class="nav-label">战装</span>
+        </button>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-title">冒险</div>
+        <button class="nav-item" data-tab="combat">
+          <span class="nav-label">战斗</span>
+          <span class="nav-level" data-skill="combat">1</span>
+        </button>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-title">状态</div>
+        <button class="nav-item" data-tab="inventory">
+          <span class="nav-label">背包</span>
+        </button>
+        <button class="nav-item" data-tab="shop">
+          <span class="nav-label">商店</span>
+        </button>
+        <button class="nav-item" data-tab="encyclopedia">
+          <span class="nav-label">图鉴</span>
+        </button>
+        <button class="nav-item" data-tab="character">
+          <span class="nav-label">人物</span>
+        </button>
+      </div>
+      <div class="nav-spacer"></div>
+      <div class="nav-hint">
+        <span class="hint-dot"></span>
+        <span>自动进行中</span>
+      </div>
+    </nav>
+
+    <!-- 主内容区 -->
+    <main class="content">
+      <!-- 钓鱼页面 -->
+      <section class="page active" id="page-fishing">
+        <div class="fishing-layout">
+          <!-- 钓点选择 -->
+          <div class="panel spots-panel">
+            <div class="panel-head">
+              <h2>选择钓点</h2>
+              <span class="panel-sub">点击切换钓点</span>
+            </div>
+            <div class="spots-grid" id="spotsGrid"></div>
+          </div>
+
+          <!-- 钓鱼面板 -->
+          <div class="panel fishing-panel">
+            <div class="fishing-scene" id="fishingScene">
+              <div class="scene-icon" id="sceneIcon">🪷</div>
+              <div class="scene-name" id="sceneName">宁静池塘</div>
+              <div class="scene-meta" id="sceneMeta">Lv.1 解锁</div>
+            </div>
+
+            <div class="fishing-status">
+              <div class="fishing-target">
+                <span class="target-label">正在垂钓</span>
+                <span class="target-fish" id="targetFish">🐟 小鱼</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" id="fishingProgress"></div>
+                <div class="progress-shimmer"></div>
+              </div>
+              <div class="progress-foot">
+                <span id="progressTime">3.0s</span>
+                <span id="progressPct">0%</span>
+              </div>
+            </div>
+
+            <div class="fishing-toggle">
+              <button class="btn btn-primary" id="toggleFishingBtn">
+                <span id="toggleFishingText">暂停垂钓</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- 渔获日志 -->
+          <div class="panel log-panel">
+            <div class="panel-head">
+              <h2>渔获日志</h2>
+              <span class="panel-sub">最近钓获</span>
+            </div>
+            <div class="log-list" id="catchLog">
+              <div class="log-empty">尚无渔获,静待鱼儿上钩…</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 钓鱼掉落物 -->
+        <div class="panel fishing-loot-panel">
+          <div class="panel-head">
+            <h2>🎣 钓鱼杂物</h2>
+            <span class="panel-sub">所有钓点均有概率掉落</span>
+          </div>
+          <div class="fishing-loot-grid" id="fishingLootGrid"></div>
+        </div>
+      </section>
+
+      <!-- 伐木页面 -->
+      <section class="page" id="page-woodcutting">
+        <div class="gather-layout">
+          <div class="panel spots-panel">
+            <div class="panel-head">
+              <h2>选择林地</h2>
+              <span class="panel-sub">点击切换伐木点</span>
+            </div>
+            <div class="spots-grid" id="woodSpotsGrid"></div>
+          </div>
+
+          <div class="panel fishing-panel">
+            <div class="fishing-scene">
+              <div class="scene-icon" id="woodSceneIcon">🌲</div>
+              <div class="scene-name" id="woodSceneName">普通树林</div>
+              <div class="scene-meta" id="woodSceneMeta">Lv.1 解锁</div>
+            </div>
+            <div class="fishing-status">
+              <div class="fishing-target">
+                <span class="target-label">正在伐木</span>
+                <span class="target-fish" id="woodTarget">🪵 普通木材</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" id="woodProgress"></div>
+                <div class="progress-shimmer"></div>
+              </div>
+              <div class="progress-foot">
+                <span id="woodProgressTime">4.0s</span>
+                <span id="woodProgressPct">0%</span>
+              </div>
+            </div>
+            <div class="fishing-toggle">
+              <button class="btn btn-primary" id="toggleWoodBtn">
+                <span id="toggleWoodText">暂停伐木</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="panel log-panel">
+            <div class="panel-head">
+              <h2>伐木日志</h2>
+              <span class="panel-sub">最近产出</span>
+            </div>
+            <div class="log-list" id="woodLog">
+              <div class="log-empty">尚未开始伐木…</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 采矿页面 -->
+      <section class="page" id="page-mining">
+        <div class="gather-layout">
+          <div class="panel spots-panel">
+            <div class="panel-head">
+              <h2>选择矿点</h2>
+              <span class="panel-sub">点击切换采矿点</span>
+            </div>
+            <div class="spots-grid" id="mineSpotsGrid"></div>
+          </div>
+
+          <div class="panel fishing-panel">
+            <div class="fishing-scene">
+              <div class="scene-icon" id="mineSceneIcon">⛏️</div>
+              <div class="scene-name" id="mineSceneName">露天矿坑</div>
+              <div class="scene-meta" id="mineSceneMeta">Lv.1 解锁</div>
+            </div>
+            <div class="fishing-status">
+              <div class="fishing-target">
+                <span class="target-label">正在采矿</span>
+                <span class="target-fish" id="mineTarget">🪨 铜矿</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" id="mineProgress"></div>
+                <div class="progress-shimmer"></div>
+              </div>
+              <div class="progress-foot">
+                <span id="mineProgressTime">5.0s</span>
+                <span id="mineProgressPct">0%</span>
+              </div>
+            </div>
+            <div class="fishing-toggle">
+              <button class="btn btn-primary" id="toggleMineBtn">
+                <span id="toggleMineText">暂停采矿</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="panel log-panel">
+            <div class="panel-head">
+              <h2>采矿日志</h2>
+              <span class="panel-sub">最近产出</span>
+            </div>
+            <div class="log-list" id="mineLog">
+              <div class="log-empty">尚未开始采矿…</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 装备页面 -->
+      <section class="page" id="page-equipment">
+        <div class="equip-layout">
+          <!-- 当前装备槽 -->
+          <div class="panel equip-slots-panel">
+            <div class="panel-head">
+              <h2>当前装备</h2>
+              <span class="panel-sub">点击卸下</span>
+            </div>
+            <div class="equip-grid" id="equippedGrid"></div>
+            <div class="equip-bonus-summary" id="bonusSummary"></div>
+          </div>
+
+          <!-- 制作台 / 装备库 -->
+          <div class="panel craft-panel">
+            <div class="panel-head">
+              <h2 id="craftTitle">装备库</h2>
+              <span class="panel-sub" id="craftSub">点击装备穿戴 · 制作台消耗材料(8槽位)</span>
+            </div>
+            <div class="craft-tabs" id="craftTabs"></div>
+            <div class="craft-list" id="craftList"></div>
+          </div>
+
+          <!-- 出售杂物 -->
+          <div class="panel sell-panel">
+            <div class="panel-head">
+              <h2>杂物出售</h2>
+              <span class="panel-sub">一键清空杂物</span>
+            </div>
+            <div class="sell-list" id="sellList"></div>
+            <button class="btn btn-primary sell-all-btn" id="sellAllBtn">一键出售杂物</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 商店页面 -->
+      <section class="page" id="page-shop">
+        <div class="shop-layout">
+          <!-- 药水商店 -->
+          <div class="panel shop-potions-panel">
+            <div class="panel-head">
+              <h2>药水商店</h2>
+              <span class="panel-sub">购买临时增益</span>
+            </div>
+            <div class="shop-grid" id="shopGrid"></div>
+          </div>
+
+          <!-- 永久升级 -->
+          <div class="panel shop-upgrades-panel">
+            <div class="panel-head">
+              <h2>永久升级</h2>
+              <span class="panel-sub">金币永久提升属性</span>
+            </div>
+            <div class="upgrade-list" id="upgradeList"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 烹饪页面 -->
+      <section class="page" id="page-cooking">
+        <div class="cook-layout">
+          <!-- 食谱列表 -->
+          <div class="panel cook-recipes-panel">
+            <div class="panel-head">
+              <h2>烹饪食谱</h2>
+              <span class="panel-sub">消耗鱼类制作食物 · 食用获得 buff</span>
+            </div>
+            <div class="cook-recipe-list" id="recipeList"></div>
+          </div>
+
+          <!-- 食物背包 -->
+          <div class="panel cook-bag-panel">
+            <div class="panel-head">
+              <h2>食物背包</h2>
+              <span class="panel-sub">点击食用</span>
+            </div>
+            <div class="cook-food-bag" id="foodBag"></div>
+          </div>
+
+          <!-- 当前 buff -->
+          <div class="panel cook-buffs-panel">
+            <div class="panel-head">
+              <h2>活跃增益</h2>
+              <span class="panel-sub">来自药水与食物</span>
+            </div>
+            <div class="cook-buffs" id="cookActiveBuffs"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 战斗页面 -->
+      <section class="page" id="page-combat">
+        <div class="panel combat-stats-panel">
+          <div class="panel-head">
+            <h2>战斗方式</h2>
+            <span class="panel-sub">选择近战、远程或魔法出击；装备自由搭配，不绑定职业</span>
+          </div>
+          <div id="combatStats"></div>
+        </div>
+
+        <div class="combat-layout">
+          <div class="panel combat-endless-panel">
+            <div class="panel-head">
+              <h2>自动战斗</h2>
+              <span class="panel-sub">选择普通怪后自动循环挂机</span>
+            </div>
+            <div id="endlessInfo"></div>
+            <div class="endless-progress-wrap">
+              <div class="progress-bar">
+                <div class="progress-fill" id="endlessProgress"></div>
+              </div>
+              <div class="progress-meta">
+                <span id="endlessProgressPct">0%</span>
+                <span id="endlessProgressTime">已暂停</span>
+              </div>
+            </div>
+            <button class="btn btn-primary" id="endlessToggleBtn">
+              <span id="endlessToggleText">开始战斗</span>
+            </button>
+            <div class="endless-log" id="endlessLog"></div>
+          </div>
+
+          <div class="panel combat-story-panel">
+            <div class="panel-head">
+              <h2>探索</h2>
+              <span class="panel-sub">已发现区域、当前威胁、传闻与未知</span>
+            </div>
+            <div class="dungeon-list" id="storyDungeonList"></div>
+          </div>
+
+          <div class="panel combat-boss-panel">
+            <div class="panel-head">
+              <h2>线索与记录</h2>
+              <span class="panel-sub">区域推进和最近记录</span>
+            </div>
+            <div class="dungeon-list" id="bossDungeonList"></div>
+          </div>
+        </div>
+
+        <div class="panel combat-talents-panel">
+          <div class="panel-head">
+            <h2>后续构筑系统</h2>
+            <span class="panel-sub" id="talentPoints">暂未启用</span>
+          </div>
+          <div class="talent-tree" id="talentTree"></div>
+        </div>
+
+        <div class="battle-overlay" id="battlePanel" style="display:none;">
+          <div class="battle-container">
+            <div class="battle-header"><h2>战斗中</h2></div>
+            <div class="battle-arena">
+              <div id="battlePlayer"></div>
+              <div class="battle-vs">VS</div>
+              <div id="battleEnemy"></div>
+            </div>
+            <div class="battle-log" id="battleLog"></div>
+            <div class="battle-skills" id="battleSkills"></div>
+            <div class="battle-result" id="battleResult"></div>
+            <button class="btn btn-primary" id="battleCloseBtn" style="display:none;">关闭</button>
+          </div>
+        </div>
+      </section>
+      <!-- 战斗装备页面 -->
+      <section class="page" id="page-combat_equip">
+        <div class="combat-equip-layout">
+          <!-- 当前装备 -->
+          <div class="panel">
+            <div class="panel-head">
+              <h2>当前战斗装备</h2>
+              <span class="panel-sub">8槽位 · 点击卸下</span>
+            </div>
+            <div class="combat-equip-grid" id="combatEquippedGrid"></div>
+          </div>
+
+          <!-- 制作台 -->
+          <div class="panel">
+            <div class="panel-head">
+              <h2>装备制作台</h2>
+              <span class="panel-sub">消耗生活技能材料制作战斗装备</span>
+            </div>
+            <div class="ce-tabs" id="combatEquipCraftTabs"></div>
+            <div class="ce-list" id="combatEquipCraftList"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 宝石页面 -->
+      <section class="page" id="page-gems">
+        <div class="gem-layout">
+          <div class="gem-main">
+            <div class="panel-head">
+              <h2>💎 宝石学 <span id="gemHeaderLevel">Lv.1</span></h2>
+              <span class="panel-sub" id="gemModeSub">挖矿获得原石,切割成可用于装备和卡片的宝石</span>
+            </div>
+            <div class="gem-mode-control" id="gemModeControl">
+              <button class="btn btn-sm gem-mode-btn" data-gem-mode="gather">⛏️ 挖矿</button>
+              <button class="btn btn-sm gem-mode-btn" data-gem-mode="cut">🔨 切割</button>
+            </div>
+
+            <div class="scene-info">
+              <span class="scene-icon" id="gemSceneIcon">💎</span>
+              <div class="scene-body">
+                <div class="scene-name" id="gemSceneName">宝石点</div>
+                <div class="scene-meta" id="gemSceneMeta"></div>
+              </div>
+              <div class="scene-target" id="gemTarget"></div>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" id="gemProgress"></div>
+            </div>
+            <div class="progress-meta">
+              <span id="gemProgressPct">0%</span>
+              <span id="gemProgressTime">已暂停</span>
+            </div>
+            <button class="btn btn-primary" id="toggleGemBtn">
+              <span id="toggleGemText">继续采集</span>
+            </button>
+
+            <div class="gem-mode-panel" id="gemGatherPanel">
+              <div class="gem-section-title">采集点</div>
+              <div class="spots-grid" id="gemSpotsGrid"></div>
+              <div class="gem-drops" id="gemDrops">
+                <div class="gem-drops-title">当前采集点掉落</div>
+                <div class="gem-drops-grid" id="gemDropsGrid"></div>
+              </div>
+            </div>
+
+            <div class="gem-mode-panel" id="gemCutPanel">
+              <div class="gem-section-title">选择原石</div>
+              <div class="gem-cut-list" id="gemCutList"></div>
+            </div>
+          </div>
+
+          <aside class="gem-sidebar">
+            <div class="panel-head">
+              <h2>库存</h2>
+              <span class="panel-sub">原石、成品和最近记录</span>
+            </div>
+            <div class="gem-side-section">
+              <div class="gem-section-title">原石库存</div>
+              <div class="gem-bag" id="gemRoughBag"></div>
+            </div>
+            <div class="gem-side-section">
+              <div class="gem-section-title">成品宝石</div>
+              <div class="gem-bag" id="gemBag"></div>
+            </div>
+            <div class="gem-side-section">
+              <div class="gem-section-title">当前用途</div>
+              <div class="gem-effect-list" id="gemEffectList"></div>
+            </div>
+            <div class="gem-side-section">
+              <div class="gem-section-title">最近日志</div>
+              <div class="catch-log" id="gemLog"></div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- 卡片页面 -->
+      <section class="page" id="page-cards">
+        <div class="card-layout">
+          <!-- 制卡台 -->
+          <div class="panel">
+            <div class="panel-head">
+              <h2>🃏 制卡台</h2>
+              <span class="panel-sub">消耗材料制作卡片 · 使用获得次数加成</span>
+            </div>
+            <div id="cardCraftLevel"></div>
+            <div class="card-craft-list" id="cardCraftList"></div>
+          </div>
+
+          <!-- 卡片背包 -->
+          <div class="panel">
+            <div class="panel-head">
+              <h2>卡片背包</h2>
+              <span class="panel-sub">点击使用激活效果</span>
+            </div>
+            <div class="card-bag" id="cardBag"></div>
+          </div>
+
+          <!-- 激活效果 -->
+          <div class="panel">
+            <div class="panel-head">
+              <h2>激活效果</h2>
+              <span class="panel-sub">当前激活的卡片加成(按次数消耗)</span>
+            </div>
+            <div class="card-active" id="cardActive"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 背包页面 -->
+      <section class="page" id="page-inventory">
+        <div class="inventory-layout">
+          <div class="panel inventory-panel">
+            <div class="panel-head">
+              <h2>🎒 背包</h2>
+              <span class="panel-sub" id="invCount">0 种物品</span>
+            </div>
+            <div class="inv-tabs" id="invTabs">
+              <button class="inv-tab active" data-inv="all">🎒 全部</button>
+              <button class="inv-tab" data-inv="material">🌿 材料</button>
+              <button class="inv-tab" data-inv="consumable">🍶 消耗品</button>
+            </div>
+            <div class="inv-grid" id="invGrid"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 图鉴页面 -->
+      <section class="page" id="page-encyclopedia">
+        <div class="encyclopedia-layout">
+          <div class="panel encyclopedia-stats-panel">
+            <div class="panel-head">
+              <h2>图鉴进度</h2>
+              <span class="panel-sub" id="encyclopediaProgress">0 / 70</span>
+            </div>
+            <div class="encyclopedia-stats" id="encyclopediaStats"></div>
+            <div class="encyclopedia-milestones" id="encyclopediaMilestones"></div>
+          </div>
+          <div class="panel encyclopedia-grid-panel">
+            <div class="panel-head">
+              <h2>鱼类图鉴</h2>
+              <span class="panel-sub">点击查看详情</span>
+            </div>
+            <div class="encyclopedia-grid" id="encyclopediaGrid"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 人物页面 -->
+      <section class="page" id="page-character">
+        <div class="character-layout">
+          <!-- 角色信息 -->
+          <div class="panel char-hero">
+            <div class="hero-avatar">
+              <div class="avatar-ring"></div>
+              <div class="avatar-emoji">🧙</div>
+            </div>
+            <div class="hero-info">
+              <div class="hero-name" id="charName">冒险者</div>
+              <div class="hero-title">见习渔夫</div>
+              <div class="hero-stats">
+                <div class="hero-stat">
+                  <span class="stat-icon">⭐</span>
+                  <span class="stat-label">等级</span>
+                  <span class="stat-val" id="heroLevel">1</span>
+                </div>
+                <div class="hero-stat">
+                  <span class="stat-icon">🪙</span>
+                  <span class="stat-label">金币</span>
+                  <span class="stat-val" id="heroGold">0</span>
+                </div>
+              </div>
+              <div class="hero-xp">
+                <div class="xp-bar">
+                  <div class="xp-fill" id="heroXpFill"></div>
+                </div>
+                <span class="xp-text" id="heroXpText">0 / 100</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 属性面板 -->
+          <div class="panel attrs-panel">
+            <div class="panel-head">
+              <h2>技能属性</h2>
+              <span class="panel-sub">三项专精</span>
+            </div>
+            <div class="attrs-list" id="attrsList"></div>
+          </div>
+
+          <!-- 背包 -->
+          <div class="panel bag-panel">
+            <div class="panel-head">
+              <h2>背包</h2>
+              <span class="panel-sub" id="bagCount">0 种物品</span>
+            </div>
+            <div class="bag-tabs" id="bagTabs">
+              <button class="bag-tab active" data-bag="fish">🐟 鱼类</button>
+              <button class="bag-tab" data-bag="loot">🎒 掉落物</button>
+              <button class="bag-tab" data-bag="wood">🪵 木材</button>
+              <button class="bag-tab" data-bag="ore">💎 矿石</button>
+            </div>
+            <div class="bag-grid" id="bagGrid"></div>
+          </div>
+
+          <!-- 装备 -->
+          <div class="panel equip-panel">
+            <div class="panel-head">
+              <h2>当前装备</h2>
+              <span class="panel-sub">前往装备页管理(8槽位)</span>
+            </div>
+            <div class="equip-slots" id="charEquippedSlots"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- 升级提示浮层 -->
+  <div class="toast-layer" id="toastLayer"></div>
+
+  <!-- 重置确认弹窗 -->
+  <div class="modal-mask" id="resetModal">
+    <div class="modal">
+      <div class="modal-icon">⚠️</div>
+      <h3>重置存档?</h3>
+      <p>所有进度将被清空,且无法恢复。</p>
+      <div class="modal-actions">
+        <button class="btn btn-ghost" id="resetCancel">取消</button>
+        <button class="btn btn-danger" id="resetConfirm">确认重置</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/config-loader.js?v=architecture-20260628-1"></script>
+  <script src="js/data.js?v=architecture-20260628-1"></script>
+  <script src="js/state_core.js?v=architecture-20260628-1"></script>
+  <script src="js/inventory_state.js?v=architecture-20260628-1"></script>
+  <script src="js/skill_state.js?v=architecture-20260628-1"></script>
+  <script src="js/equipment_state.js?v=architecture-20260628-1"></script>
+  <script src="js/world_state.js?v=architecture-20260628-1"></script>
+  <script src="js/encyclopedia_state.js?v=architecture-20260628-1"></script>
+  <script src="js/cooking_state.js?v=architecture-20260628-1"></script>
+  <script src="js/combat_state.js?v=architecture-20260628-1"></script>
+  <script src="js/combat_equipment_state.js?v=architecture-20260628-1"></script>
+  <script src="js/gemology_state.js?v=architecture-20260628-1"></script>
+  <script src="js/cards_state.js?v=architecture-20260628-1"></script>
+  <script src="js/state.js?v=architecture-20260628-1"></script>
+  <script src="js/ui.js?v=architecture-20260628-1"></script>
+  <script src="js/fishing.js?v=architecture-20260628-1"></script>
+  <script src="js/gathering.js?v=architecture-20260628-1"></script>
+  <script src="js/equipment.js?v=architecture-20260628-1"></script>
+  <script src="js/cooking.js?v=architecture-20260628-1"></script>
+  <script src="js/combat.js?v=architecture-20260628-1"></script>
+  <script src="js/combat_equipment.js?v=architecture-20260628-1"></script>
+  <script src="js/gems.js?v=architecture-20260628-1"></script>
+  <script src="js/cards.js?v=architecture-20260628-1"></script>
+  <script src="js/inventory.js?v=architecture-20260628-1"></script>
+  <script src="js/shop.js?v=architecture-20260628-1"></script>
+  <script src="js/encyclopedia.js?v=architecture-20260628-1"></script>
+  <script src="js/character.js?v=architecture-20260628-1"></script>
+  <script src="js/game_systems.js?v=architecture-20260628-1"></script>
+  <script src="js/main.js?v=architecture-20260628-1"></script>
+</body>
+</html>

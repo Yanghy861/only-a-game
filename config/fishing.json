@@ -1,0 +1,462 @@
+{
+  "spots": [
+    {
+      "id": "pond",
+      "name": "宁静池塘",
+      "icon": "🪷",
+      "desc": "基础食材钓点,稳定产出低级料理用鱼。",
+      "requiredLevel": 1,
+      "baseTime": 3000,
+      "fish": [
+        {
+          "id": "minnow",
+          "name": "小鱼",
+          "icon": "🐟",
+          "xp": 5,
+          "gold": 2,
+          "weight": 60
+        },
+        {
+          "id": "crucian",
+          "name": "鲫鱼",
+          "icon": "🐟",
+          "xp": 8,
+          "gold": 4,
+          "weight": 25
+        },
+        {
+          "id": "carp",
+          "name": "鲤鱼",
+          "icon": "🐠",
+          "xp": 12,
+          "gold": 8,
+          "weight": 12
+        }
+      ]
+    },
+    {
+      "id": "river",
+      "name": "蜿蜒溪流",
+      "icon": "🌊",
+      "desc": "溪流鱼种适合制作经验与速度类料理。",
+      "requiredLevel": 5,
+      "baseTime": 4000,
+      "fish": [
+        {
+          "id": "trout",
+          "name": "鳟鱼",
+          "icon": "🐟",
+          "xp": 18,
+          "gold": 12,
+          "weight": 45
+        },
+        {
+          "id": "perch",
+          "name": "河鲈",
+          "icon": "🐟",
+          "xp": 25,
+          "gold": 18,
+          "weight": 30
+        },
+        {
+          "id": "salmon",
+          "name": "鲑鱼",
+          "icon": "🐠",
+          "xp": 35,
+          "gold": 28,
+          "weight": 18
+        },
+        {
+          "id": "eel",
+          "name": "鳗鱼",
+          "icon": "🐍",
+          "xp": 60,
+          "gold": 55,
+          "weight": 6
+        },
+        {
+          "id": "pearl_oyster",
+          "name": "珍珠蚌",
+          "icon": "🦪",
+          "xp": 90,
+          "gold": 80,
+          "weight": 1
+        }
+      ]
+    },
+    {
+      "id": "lake",
+      "name": "幽深湖泊",
+      "icon": "🏞️",
+      "desc": "湖泊产出中级料理鱼,兼顾战斗补给。",
+      "requiredLevel": 10,
+      "baseTime": 5000,
+      "fish": [
+        {
+          "id": "pike",
+          "name": "梭鱼",
+          "icon": "🐟",
+          "xp": 45,
+          "gold": 35,
+          "weight": 40
+        },
+        {
+          "id": "bass",
+          "name": "鲈鱼",
+          "icon": "🐟",
+          "xp": 65,
+          "gold": 55,
+          "weight": 20
+        },
+        {
+          "id": "catfish",
+          "name": "鲶鱼",
+          "icon": "🐠",
+          "xp": 80,
+          "gold": 70,
+          "weight": 30
+        },
+        {
+          "id": "sturgeon",
+          "name": "鲟鱼",
+          "icon": "🐡",
+          "xp": 140,
+          "gold": 130,
+          "weight": 8
+        }
+      ]
+    },
+    {
+      "id": "estuary",
+      "name": "咸水河口",
+      "icon": "🌅",
+      "desc": "河口鱼类用于混合料理和任务提交。",
+      "requiredLevel": 22,
+      "baseTime": 7000,
+      "fish": [
+        {
+          "id": "mullet",
+          "name": "鲻鱼",
+          "icon": "🐟",
+          "xp": 200,
+          "gold": 180,
+          "weight": 35
+        },
+        {
+          "id": "tarpon",
+          "name": "大海鲢",
+          "icon": "🐟",
+          "xp": 400,
+          "gold": 380,
+          "weight": 22
+        },
+        {
+          "id": "sawfish",
+          "name": "锯鳐",
+          "icon": "🐊",
+          "xp": 1000,
+          "gold": 1100,
+          "weight": 3
+        }
+      ]
+    },
+    {
+      "id": "ocean",
+      "name": "无垠海洋",
+      "icon": "🌅",
+      "desc": "海洋鱼类是战斗补给的主要来源。",
+      "requiredLevel": 30,
+      "baseTime": 8000,
+      "fish": [
+        {
+          "id": "mackerel",
+          "name": "鲭鱼",
+          "icon": "🐟",
+          "xp": 350,
+          "gold": 320,
+          "weight": 35
+        },
+        {
+          "id": "tuna",
+          "name": "金枪鱼",
+          "icon": "🐠",
+          "xp": 550,
+          "gold": 520,
+          "weight": 28
+        },
+        {
+          "id": "swordfish",
+          "name": "剑鱼",
+          "icon": "🐡",
+          "xp": 800,
+          "gold": 800,
+          "weight": 22
+        },
+        {
+          "id": "shark",
+          "name": "鲨鱼",
+          "icon": "🦈",
+          "xp": 2000,
+          "gold": 2400,
+          "weight": 2.5
+        },
+        {
+          "id": "kraken",
+          "name": "小海怪",
+          "icon": "🐙",
+          "xp": 3500,
+          "gold": 4500,
+          "weight": 0.5
+        }
+      ]
+    },
+    {
+      "id": "reef",
+      "name": "珊瑚礁群",
+      "icon": "🪸",
+      "desc": "珊瑚礁产出稀有料理鱼和水域材料。",
+      "requiredLevel": 40,
+      "baseTime": 9000,
+      "fish": [
+        {
+          "id": "clownfish",
+          "name": "小丑鱼",
+          "icon": "🐠",
+          "xp": 600,
+          "gold": 550,
+          "weight": 30
+        },
+        {
+          "id": "angelfish",
+          "name": "神仙鱼",
+          "icon": "🐟",
+          "xp": 850,
+          "gold": 800,
+          "weight": 26
+        },
+        {
+          "id": "parrotfish",
+          "name": "鹦嘴鱼",
+          "icon": "🐠",
+          "xp": 1700,
+          "gold": 1700,
+          "weight": 15
+        },
+        {
+          "id": "reef_spirit",
+          "name": "礁灵",
+          "icon": "✨",
+          "xp": 8000,
+          "gold": 10000,
+          "weight": 0.2
+        }
+      ]
+    },
+    {
+      "id": "trench",
+      "name": "深海海沟",
+      "icon": "🌊",
+      "desc": "深海鱼类用于高级战斗食物。",
+      "requiredLevel": 52,
+      "baseTime": 10000,
+      "fish": [
+        {
+          "id": "anglerfish",
+          "name": "鮟鱇",
+          "icon": "🐟",
+          "xp": 1500,
+          "gold": 1500,
+          "weight": 30
+        },
+        {
+          "id": "viperfish",
+          "name": "毒蛇鱼",
+          "icon": "🐠",
+          "xp": 2200,
+          "gold": 2200,
+          "weight": 26
+        },
+        {
+          "id": "leviathan",
+          "name": "利维坦幼体",
+          "icon": "🐲",
+          "xp": 18000,
+          "gold": 22000,
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "id": "wreck",
+      "name": "沉船墓地",
+      "icon": "🚢",
+      "desc": "沉船水域产出特殊收藏与终局料理材料。",
+      "requiredLevel": 65,
+      "baseTime": 12000,
+      "fish": [
+        {
+          "id": "wreck_bass",
+          "name": "沉船鲈",
+          "icon": "🐟",
+          "xp": 3500,
+          "gold": 3500,
+          "weight": 30
+        },
+        {
+          "id": "ghost_fish",
+          "name": "幽灵鱼",
+          "icon": "👻",
+          "xp": 5500,
+          "gold": 5800,
+          "weight": 26
+        },
+        {
+          "id": "captain_ghost",
+          "name": "船长亡灵",
+          "icon": "💀",
+          "xp": 45000,
+          "gold": 58000,
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "id": "abyss",
+      "name": "深渊裂隙",
+      "icon": "🕳️",
+      "desc": "终局钓点,产出虚空系传说鱼。",
+      "requiredLevel": 80,
+      "baseTime": 14000,
+      "fish": [
+        {
+          "id": "void_fish",
+          "name": "虚空鱼",
+          "icon": "🐟",
+          "xp": 8000,
+          "gold": 8500,
+          "weight": 30
+        },
+        {
+          "id": "shadow_ray",
+          "name": "暗影魟",
+          "icon": "🐠",
+          "xp": 13000,
+          "gold": 14000,
+          "weight": 26
+        },
+        {
+          "id": "void_horror",
+          "name": "虚空恐兽",
+          "icon": "🐲",
+          "xp": 35000,
+          "gold": 40000,
+          "weight": 16
+        },
+        {
+          "id": "void_king",
+          "name": "虚空之王",
+          "icon": "👑",
+          "xp": 700000,
+          "gold": 950000,
+          "weight": 0.8
+        },
+        {
+          "id": "creator",
+          "name": "创世者化身",
+          "icon": "🌟",
+          "xp": 2000000,
+          "gold": 3000000,
+          "weight": 0.2
+        }
+      ]
+    }
+  ],
+  "loot": [
+    {
+      "id": "seaweed",
+      "name": "水草",
+      "icon": "🌿",
+      "gold": 1,
+      "weight": 28,
+      "type": "junk"
+    },
+    {
+      "id": "old_boot",
+      "name": "破靴子",
+      "icon": "🥾",
+      "gold": 2,
+      "weight": 12,
+      "type": "junk"
+    },
+    {
+      "id": "empty_bottle",
+      "name": "漂流瓶",
+      "icon": "🍾",
+      "gold": 8,
+      "weight": 8,
+      "type": "junk"
+    },
+    {
+      "id": "fish_bone",
+      "name": "鱼骨",
+      "icon": "🦴",
+      "gold": 4,
+      "weight": 18,
+      "type": "water_mat"
+    },
+    {
+      "id": "shell",
+      "name": "贝壳",
+      "icon": "🐚",
+      "gold": 6,
+      "weight": 14,
+      "type": "water_mat"
+    },
+    {
+      "id": "sea_salt",
+      "name": "海盐",
+      "icon": "🧂",
+      "gold": 10,
+      "weight": 10,
+      "type": "water_mat"
+    },
+    {
+      "id": "pearl",
+      "name": "珍珠",
+      "icon": "⚪",
+      "gold": 50,
+      "weight": 5,
+      "type": "water_mat"
+    },
+    {
+      "id": "coral_shard",
+      "name": "珊瑚碎片",
+      "icon": "🪸",
+      "gold": 80,
+      "weight": 3,
+      "type": "water_mat"
+    },
+    {
+      "id": "sealed_bottle",
+      "name": "密封漂流瓶",
+      "icon": "🍾",
+      "gold": 120,
+      "weight": 1.5,
+      "type": "water_cache"
+    },
+    {
+      "id": "water_chest",
+      "name": "水域宝箱",
+      "icon": "📦",
+      "gold": 300,
+      "weight": 0.5,
+      "type": "water_cache"
+    }
+  ],
+  "lootChance": 0.18,
+  "sellableLoot": [
+    "seaweed",
+    "old_boot",
+    "empty_bottle"
+  ]
+}

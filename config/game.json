@@ -1,0 +1,4 @@
+{
+  "maxLevel": 100,
+  "xpFormula": { "base": 50, "exponent": 2.3, "linear": 15, "constant": 30 }
+}

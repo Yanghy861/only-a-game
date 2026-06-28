@@ -1,0 +1,43 @@
+{
+  "milestones": [
+    {
+      "count": 5,
+      "reward": {
+        "gold": 800,
+        "desc": "800 金币"
+      }
+    },
+    {
+      "count": 12,
+      "reward": {
+        "gold": 3000,
+        "desc": "3000 金币"
+      }
+    },
+    {
+      "count": 20,
+      "reward": {
+        "gold": 10000,
+        "xpBonus": 0.03,
+        "desc": "10000 金币 + 经验+3%"
+      }
+    },
+    {
+      "count": 28,
+      "reward": {
+        "gold": 30000,
+        "xpBonus": 0.05,
+        "desc": "30000 金币 + 经验+5%"
+      }
+    },
+    {
+      "count": 35,
+      "reward": {
+        "gold": 100000,
+        "xpBonus": 0.08,
+        "goldBonus": 0.05,
+        "desc": "10万金币 + 经验+8% + 金币+5%"
+      }
+    }
+  ]
+}

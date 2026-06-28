@@ -1,0 +1,17 @@
+# Local editor / agent state
+.codex/
+.agents/
+.trae/
+
+# Backups and generated local files
+Backup/
+*.stat
+*.dat
+*.bin
+*.db
+*.config
+
+# OS noise
+Thumbs.db
+Desktop.ini
+

@@ -1,0 +1,59 @@
+{
+  "gemSpots": [
+    {
+      "id": "gem_riverbed", "name": "河床宝石点", "icon": "💎",
+      "requiredLevel": 1, "baseDuration": 8000,
+      "desc": "河边偶尔能找到宝石原石",
+      "drops": [
+        { "id": "rough_quartz", "name": "石英原石", "icon": "⬜", "weight": 450, "gold": 5, "xp": 8 },
+        { "id": "rough_amethyst", "name": "紫水晶原石", "icon": "🟣", "weight": 270, "gold": 12, "xp": 15 },
+        { "id": "rough_topaz", "name": "黄玉原石", "icon": "🟡", "weight": 135, "gold": 25, "xp": 25 },
+        { "id": "rough_emerald", "name": "翡翠原石", "icon": "🟢", "weight": 36, "gold": 60, "xp": 50 },
+        { "id": "rough_ruby", "name": "红宝石原石", "icon": "🔴", "weight": 9, "gold": 150, "xp": 100 },
+        { "id": "gem_waste", "name": "废石", "icon": "🪨", "weight": 100, "gold": 2, "xp": 2, "type": "waste" }
+      ]
+    },
+    {
+      "id": "gem_mine", "name": "宝石矿脉", "icon": "⛏️",
+      "requiredLevel": 15, "baseDuration": 12000,
+      "desc": "深层矿脉中蕴含更多宝石",
+      "drops": [
+        { "id": "rough_quartz", "name": "石英原石", "icon": "⬜", "weight": 270, "gold": 5, "xp": 8 },
+        { "id": "rough_amethyst", "name": "紫水晶原石", "icon": "🟣", "weight": 315, "gold": 12, "xp": 15 },
+        { "id": "rough_topaz", "name": "黄玉原石", "icon": "🟡", "weight": 225, "gold": 25, "xp": 25 },
+        { "id": "rough_emerald", "name": "翡翠原石", "icon": "🟢", "weight": 72, "gold": 60, "xp": 50 },
+        { "id": "rough_ruby", "name": "红宝石原石", "icon": "🔴", "weight": 18, "gold": 150, "xp": 100 },
+        { "id": "gem_waste", "name": "废石", "icon": "🪨", "weight": 100, "gold": 3, "xp": 3, "type": "waste" }
+      ]
+    },
+    {
+      "id": "gem_abyss", "name": "深渊宝石洞", "icon": "🌌",
+      "requiredLevel": 40, "baseDuration": 18000,
+      "desc": "深渊中的稀有宝石,传说级别",
+      "drops": [
+        { "id": "rough_amethyst", "name": "紫水晶原石", "icon": "🟣", "weight": 180, "gold": 12, "xp": 15 },
+        { "id": "rough_topaz", "name": "黄玉原石", "icon": "🟡", "weight": 270, "gold": 25, "xp": 25 },
+        { "id": "rough_emerald", "name": "翡翠原石", "icon": "🟢", "weight": 270, "gold": 60, "xp": 50 },
+        { "id": "rough_ruby", "name": "红宝石原石", "icon": "🔴", "weight": 135, "gold": 150, "xp": 100 },
+        { "id": "rough_sapphire", "name": "蓝宝石原石", "icon": "🔵", "weight": 36, "gold": 300, "xp": 180 },
+        { "id": "rough_diamond", "name": "钻石原石", "icon": "💠", "weight": 9, "gold": 800, "xp": 400 },
+        { "id": "gem_waste", "name": "废石", "icon": "🪨", "weight": 100, "gold": 5, "xp": 5, "type": "waste" }
+      ]
+    }
+  ],
+  "gemTypes": [
+    { "id": "quartz_gem", "roughId": "rough_quartz", "name": "石英", "icon": "⬜", "stat": "gold", "value": 0.05, "desc": "出售价值+5%", "cutDuration": 2000 },
+    { "id": "amethyst_gem", "roughId": "rough_amethyst", "name": "紫水晶", "icon": "🟣", "stat": "xp", "value": 0.05, "desc": "经验+5%", "cutDuration": 2500 },
+    { "id": "topaz_gem", "roughId": "rough_topaz", "name": "黄玉", "icon": "🟡", "stat": "gold", "value": 0.10, "desc": "出售价值+10%", "cutDuration": 3000 },
+    { "id": "emerald_gem", "roughId": "rough_emerald", "name": "翡翠", "icon": "🟢", "stat": "def", "value": 15, "desc": "战斗防御+15", "cutDuration": 4000 },
+    { "id": "ruby_gem", "roughId": "rough_ruby", "name": "红宝石", "icon": "🔴", "stat": "atk", "value": 20, "desc": "战斗攻击+20", "cutDuration": 5000 },
+    { "id": "sapphire_gem", "roughId": "rough_sapphire", "name": "蓝宝石", "icon": "🔵", "stat": "hp", "value": 100, "desc": "战斗生命+100", "cutDuration": 6000 },
+    { "id": "diamond_gem", "roughId": "rough_diamond", "name": "钻石", "icon": "💠", "stat": "all", "value": 0.10, "desc": "全属性+10%", "cutDuration": 8000 }
+  ],
+  "cutting": {
+    "costPerCut": 50,
+    "successRate": 0.90,
+    "failReturnRate": 0.3,
+    "cutDuration": 3000
+  }
+}

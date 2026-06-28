@@ -1,0 +1,153 @@
+{
+  "playerBase": {
+    "hp": 100,
+    "atk": 12,
+    "def": 5,
+    "spd": 10,
+    "crit": 0.05,
+    "critDmg": 1.5,
+    "hpPerLevel": 18,
+    "atkPerLevel": 2.2,
+    "defPerLevel": 1.0,
+    "spdPerLevel": 0.3
+  },
+  "resource": {
+    "name": "能量",
+    "icon": "⚡",
+    "max": 100,
+    "perTurn": 20,
+    "startWith": 40
+  },
+  "skills": [
+    {
+      "id": "attack", "name": "普通攻击", "icon": "⚔️",
+      "desc": "造成100%攻击力伤害,恢复10能量",
+      "cost": 0, "gain": 10, "type": "damage", "power": 1.0, "element": "physical"
+    },
+    {
+      "id": "power_strike", "name": "强力一击", "icon": "💥",
+      "desc": "消耗30能量,造成250%攻击力伤害",
+      "cost": 30, "gain": 0, "type": "damage", "power": 2.5, "element": "physical"
+    },
+    {
+      "id": "defend", "name": "防御", "icon": "🛡️",
+      "desc": "本回合受到伤害减少60%,恢复15能量",
+      "cost": 0, "gain": 15, "type": "defend", "power": 0.4
+    },
+    {
+      "id": "heal", "name": "治疗术", "icon": "✨",
+      "desc": "消耗40能量,恢复30%最大生命值",
+      "cost": 40, "gain": 0, "type": "heal", "power": 0.3
+    },
+    {
+      "id": "fireball", "name": "火球术", "icon": "🔥",
+      "desc": "消耗35能量,造成200%伤害并附加燃烧(3回合每回合50%攻击力伤害)",
+      "cost": 35, "gain": 0, "type": "damage_dot", "power": 2.0, "element": "fire",
+      "dot": { "power": 0.5, "turns": 3, "element": "fire" }
+    },
+    {
+      "id": "ice_lance", "name": "冰锥术", "icon": "❄️",
+      "desc": "消耗30能量,造成180%伤害并降低敌人速度(2回合)",
+      "cost": 30, "gain": 0, "type": "damage_debuff", "power": 1.8, "element": "ice",
+      "debuff": { "stat": "spd", "value": 0.5, "turns": 2 }
+    },
+    {
+      "id": "thunder", "name": "雷霆术", "icon": "⚡",
+      "desc": "消耗45能量,造成300%伤害,30%几率眩晕敌人(跳过下回合)",
+      "cost": 45, "gain": 0, "type": "damage_stun", "power": 3.0, "element": "thunder",
+      "stunChance": 0.3
+    },
+    {
+      "id": "poison_strike", "name": "毒击", "icon": "☠️",
+      "desc": "消耗20能量,造成120%伤害并中毒(5回合每回合30%攻击力伤害)",
+      "cost": 20, "gain": 5, "type": "damage_dot", "power": 1.2, "element": "poison",
+      "dot": { "power": 0.3, "turns": 5, "element": "poison" }
+    },
+    {
+      "id": "life_drain", "name": "生命汲取", "icon": "🩸",
+      "desc": "消耗35能量,造成150%伤害并恢复造成伤害的50%",
+      "cost": 35, "gain": 0, "type": "damage_lifesteal", "power": 1.5, "element": "dark",
+      "lifesteal": 0.5
+    },
+    {
+      "id": "berserk", "name": "狂暴", "icon": "🔥",
+      "desc": "消耗30能量,3回合内攻击力+50%",
+      "cost": 30, "gain": 0, "type": "buff", "power": 0.5,
+      "buff": { "stat": "atk", "value": 0.5, "turns": 3 }
+    }
+  ],
+  "enemySkills": [
+    {
+      "id": "enemy_attack", "name": "攻击", "icon": "⚔️",
+      "cost": 0, "gain": 15, "type": "damage", "power": 1.0
+    },
+    {
+      "id": "enemy_rage", "name": "狂暴", "icon": "🔥",
+      "cost": 50, "gain": 0, "type": "damage", "power": 2.0
+    }
+  ],
+  "elements": {
+    "physical": { "name": "物理", "icon": "⚔️" },
+    "fire": { "name": "火焰", "icon": "🔥" },
+    "ice": { "name": "冰霜", "icon": "❄️" },
+    "thunder": { "name": "雷电", "icon": "⚡" },
+    "poison": { "name": "毒素", "icon": "☠️" },
+    "dark": { "name": "暗影", "icon": "🌑" }
+  },
+  "elementRelations": {
+    "fire": { "strong": "ice", "weak": "dark" },
+    "ice": { "strong": "thunder", "weak": "fire" },
+    "thunder": { "strong": "poison", "weak": "ice" },
+    "poison": { "strong": "physical", "weak": "thunder" },
+    "physical": { "strong": "dark", "weak": "poison" },
+    "dark": { "strong": "fire", "weak": "physical" }
+  },
+  "elementMultiplier": {
+    "strong": 1.5,
+    "weak": 0.6,
+    "same": 1.0,
+    "normal": 1.0
+  },
+  "combatLevel": {
+    "name": "战斗等级",
+    "icon": "⚔️",
+    "baseXp": 50,
+    "xpGrowth": 1.18
+  },
+  "talents": {
+    "pointsPerLevel": 1,
+    "branches": [
+      {
+        "id": "warrior",
+        "name": "战士",
+        "icon": "⚔️",
+        "talents": [
+          { "id": "warrior_1", "name": "强身", "desc": "生命上限+5%", "cost": 1, "effect": { "stat": "hp", "value": 0.05 } },
+          { "id": "warrior_2", "name": "铁壁", "desc": "防御+5%", "cost": 1, "requires": ["warrior_1"], "effect": { "stat": "def", "value": 0.05 } },
+          { "id": "warrior_3", "name": "狂怒", "desc": "攻击+5%", "cost": 1, "requires": ["warrior_2"], "effect": { "stat": "atk", "value": 0.05 } }
+        ]
+      },
+      {
+        "id": "assassin",
+        "name": "刺客",
+        "icon": "🗡️",
+        "talents": [
+          { "id": "assassin_1", "name": "敏锐", "desc": "暴击率+2%", "cost": 1, "effect": { "stat": "crit", "value": 0.02 } },
+          { "id": "assassin_2", "name": "致命", "desc": "暴击伤害+10%", "cost": 1, "requires": ["assassin_1"], "effect": { "stat": "critDmg", "value": 0.10 } },
+          { "id": "assassin_3", "name": "极速", "desc": "速度+5%", "cost": 1, "requires": ["assassin_2"], "effect": { "stat": "spd", "value": 0.05 } }
+        ]
+      },
+      {
+        "id": "elementalist",
+        "name": "元素",
+        "icon": "🔥",
+        "talents": [
+          { "id": "elem_1", "name": "元素亲和", "desc": "元素克制伤害+10%", "cost": 1, "effect": { "stat": "elementStrong", "value": 0.10 } },
+          { "id": "elem_2", "name": "元素抵抗", "desc": "被克制伤害-10%", "cost": 1, "requires": ["elem_1"], "effect": { "stat": "elementWeak", "value": -0.10 } }
+        ]
+      }
+    ]
+  },
+  "autoTickMs": 1500,
+  "maxEndlessOfflineSeconds": 3600
+}

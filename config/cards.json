@@ -1,0 +1,206 @@
+{
+  "cardTypes": {
+    "combat": "战斗卡",
+    "fishing": "钓鱼卡",
+    "woodcutting": "伐木卡",
+    "mining": "采矿卡",
+    "gemology": "宝石卡",
+    "global": "通用卡"
+  },
+  "recipes": [
+    {
+      "id": "combat_atk_card",
+      "name": "狂战卡",
+      "icon": "⚔️",
+      "type": "combat",
+      "desc": "下一场战斗攻击力+50%",
+      "effect": {
+        "target": "combat_atk",
+        "value": 0.5,
+        "charges": 1
+      },
+      "recipe": {
+        "magic_dust": 2,
+        "wolf_bone": 1
+      },
+      "craftXp": 15
+    },
+    {
+      "id": "combat_def_card",
+      "name": "铁壁卡",
+      "icon": "🛡️",
+      "type": "combat",
+      "desc": "下一场战斗防御力+50%",
+      "effect": {
+        "target": "combat_def",
+        "value": 0.5,
+        "charges": 1
+      },
+      "recipe": {
+        "magic_dust": 2,
+        "leather": 2
+      },
+      "craftXp": 15
+    },
+    {
+      "id": "combat_crit_card",
+      "name": "致命卡",
+      "icon": "🎯",
+      "type": "combat",
+      "desc": "下一场战斗暴击率+25%",
+      "effect": {
+        "target": "combat_crit",
+        "value": 0.25,
+        "charges": 1
+      },
+      "recipe": {
+        "magic_dust": 3,
+        "ruby_gem": 1
+      },
+      "craftXp": 25
+    },
+    {
+      "id": "fishing_rarity_card",
+      "name": "幸运钓卡",
+      "icon": "🍀",
+      "type": "fishing",
+      "desc": "下次5次钓鱼稀有度大幅提升",
+      "effect": {
+        "target": "fishing_rarity",
+        "value": 0.5,
+        "charges": 5
+      },
+      "recipe": {
+        "magic_dust": 1,
+        "minnow": 3
+      },
+      "craftXp": 10
+    },
+    {
+      "id": "fishing_gold_card",
+      "name": "丰收钓卡",
+      "icon": "💰",
+      "type": "fishing",
+      "desc": "下次5次钓鱼金币收益+100%",
+      "effect": {
+        "target": "fishing_gold",
+        "value": 1,
+        "charges": 5
+      },
+      "recipe": {
+        "magic_dust": 1,
+        "carp": 2
+      },
+      "craftXp": 10
+    },
+    {
+      "id": "wood_yield_card",
+      "name": "伐木丰收卡",
+      "icon": "🪓",
+      "type": "woodcutting",
+      "desc": "下次5次伐木产出+100%",
+      "effect": {
+        "target": "wood_yield",
+        "value": 1,
+        "charges": 5
+      },
+      "recipe": {
+        "magic_dust": 1,
+        "oak_log": 3
+      },
+      "craftXp": 10
+    },
+    {
+      "id": "mine_yield_card",
+      "name": "采矿丰收卡",
+      "icon": "⛏️",
+      "type": "mining",
+      "desc": "下次5次采矿产出+100%",
+      "effect": {
+        "target": "mine_yield",
+        "value": 1,
+        "charges": 5
+      },
+      "recipe": {
+        "magic_dust": 1,
+        "iron_ore": 3
+      },
+      "craftXp": 10
+    },
+    {
+      "id": "gem_luck_card",
+      "name": "宝石卡",
+      "icon": "💎",
+      "type": "gemology",
+      "desc": "下次3次宝石采集稀有度提升",
+      "effect": {
+        "target": "gem_rarity",
+        "value": 0.5,
+        "charges": 3
+      },
+      "recipe": {
+        "magic_dust": 2,
+        "rough_quartz": 2
+      },
+      "craftXp": 12
+    },
+    {
+      "id": "global_xp_card",
+      "name": "经验卡",
+      "icon": "⭐",
+      "type": "global",
+      "desc": "下次10次任何动作经验+50%",
+      "effect": {
+        "target": "global_xp",
+        "value": 0.5,
+        "charges": 10
+      },
+      "recipe": {
+        "magic_dust": 3,
+        "amethyst_gem": 1
+      },
+      "craftXp": 20
+    },
+    {
+      "id": "global_gold_card",
+      "name": "金币卡",
+      "icon": "🪙",
+      "type": "global",
+      "desc": "下次10次任何动作金币+50%",
+      "effect": {
+        "target": "global_gold",
+        "value": 0.5,
+        "charges": 10
+      },
+      "recipe": {
+        "magic_dust": 3,
+        "topaz_gem": 1
+      },
+      "craftXp": 20
+    },
+    {
+      "id": "combat_full_card",
+      "name": "战神卡",
+      "icon": "🌟",
+      "type": "combat",
+      "desc": "下一场战斗全属性+30%",
+      "effect": {
+        "target": "combat_all",
+        "value": 0.3,
+        "charges": 1
+      },
+      "recipe": {
+        "magic_dust": 5,
+        "ruby_gem": 2,
+        "dragon_scale": 1
+      },
+      "craftXp": 50
+    }
+  ],
+  "crafting": {
+    "skillName": "制卡",
+    "icon": "🃏",
+    "baseXp": 20,
+    "xpGrowth": 1.15
+  }
+}

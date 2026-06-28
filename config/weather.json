@@ -1,0 +1,63 @@
+{
+  "weather": [
+    {
+      "id": "clear",
+      "name": "晴朗",
+      "icon": "☀️",
+      "desc": "风和日丽"
+    },
+    {
+      "id": "cloudy",
+      "name": "多云",
+      "icon": "☁️",
+      "desc": "云层遮挡"
+    },
+    {
+      "id": "rain",
+      "name": "雨天",
+      "icon": "🌧️",
+      "desc": "细雨绵绵"
+    },
+    {
+      "id": "fog",
+      "name": "雾天",
+      "icon": "🌫️",
+      "desc": "浓雾弥漫"
+    },
+    {
+      "id": "storm",
+      "name": "暴风雨",
+      "icon": "⛈️",
+      "desc": "电闪雷鸣"
+    }
+  ],
+  "timePeriods": [
+    {
+      "id": "dawn",
+      "name": "黎明",
+      "icon": "🌅",
+      "desc": "晨光初现"
+    },
+    {
+      "id": "day",
+      "name": "白天",
+      "icon": "☀️",
+      "desc": "阳光明媚"
+    },
+    {
+      "id": "dusk",
+      "name": "黄昏",
+      "icon": "🌇",
+      "desc": "夕阳西下"
+    },
+    {
+      "id": "night",
+      "name": "夜晚",
+      "icon": "🌙",
+      "desc": "万籁俱寂"
+    }
+  ],
+  "weatherDurationMin": 180000,
+  "weatherDurationMax": 300000,
+  "timePeriodDuration": 360000
+}

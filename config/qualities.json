@@ -1,0 +1,9 @@
+{
+  "qualities": [
+    { "id": "normal", "name": "普通", "color": "#c9bb9a", "multiplier": 1.0, "weight": 60 },
+    { "id": "fine", "name": "优秀", "color": "#7a9a5a", "multiplier": 1.5, "weight": 25 },
+    { "id": "rare", "name": "稀有", "color": "#5a8acc", "multiplier": 2.5, "weight": 10 },
+    { "id": "epic", "name": "史诗", "color": "#9a5acc", "multiplier": 5.0, "weight": 4 },
+    { "id": "legendary", "name": "传说", "color": "#f0a030", "multiplier": 12.0, "weight": 1 }
+  ]
+}

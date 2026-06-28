@@ -1,0 +1,232 @@
+{
+  "areas": [
+    {
+      "id": "forest_edge",
+      "name": "林地边缘",
+      "icon": "🌲",
+      "desc": "冒险从林地边缘开始。这里的威胁不强,但足够训练基础战斗。",
+      "unlock": { "type": "start" },
+      "rumorAfterClear": "矿洞深处传来沉重的敲击声。",
+      "monsters": [
+        {
+          "id": "slime",
+          "name": "史莱姆",
+          "icon": "🟢",
+          "hp": 60,
+          "atk": 8,
+          "def": 2,
+          "spd": 5,
+          "element": "physical",
+          "gold": 18,
+          "xp": 18,
+          "drops": [{ "id": "slime_gel", "count": 1, "chance": 0.75 }]
+        },
+        {
+          "id": "wolf",
+          "name": "野狼",
+          "icon": "🐺",
+          "hp": 120,
+          "atk": 14,
+          "def": 4,
+          "spd": 12,
+          "element": "physical",
+          "gold": 35,
+          "xp": 32,
+          "drops": [
+            { "id": "leather", "count": 1, "chance": 0.7 },
+            { "id": "wolf_bone", "count": 1, "chance": 0.35 }
+          ]
+        },
+        {
+          "id": "treant_sprout",
+          "name": "树精残枝",
+          "icon": "🌿",
+          "hp": 180,
+          "atk": 18,
+          "def": 10,
+          "spd": 6,
+          "element": "physical",
+          "gold": 48,
+          "xp": 45,
+          "drops": [
+            { "id": "resin", "count": 1, "chance": 0.65 },
+            { "id": "oak_log", "count": 2, "chance": 0.35 }
+          ]
+        }
+      ],
+      "threat": {
+        "id": "forest_warden",
+        "name": "林地守卫",
+        "icon": "🌲",
+        "desc": "守护林地炉火的古老树灵。击败后会显露通往矿洞的道路。",
+        "hp": 900,
+        "atk": 26,
+        "def": 12,
+        "spd": 8,
+        "element": "physical",
+        "gold": 1200,
+        "xp": 700,
+        "drops": [
+          { "id": "leather", "count": 3, "chance": 1 },
+          { "id": "resin", "count": 2, "chance": 1 },
+          { "id": "magic_dust", "count": 1, "chance": 0.25 }
+        ],
+        "unlocks": [{ "type": "area", "id": "mine_entrance", "text": "矿洞入口" }]
+      }
+    },
+    {
+      "id": "mine_entrance",
+      "name": "矿洞入口",
+      "icon": "⛏️",
+      "desc": "矿洞里盘踞着偷矿的怪物。这里开始产出金属战斗材料。",
+      "unlock": { "type": "threatCleared", "areaId": "forest_edge" },
+      "rumorAfterClear": "潮湿的风从洞穴深处吹来,里面似乎有毒雾。",
+      "monsters": [
+        {
+          "id": "goblin",
+          "name": "哥布林",
+          "icon": "👺",
+          "hp": 260,
+          "atk": 28,
+          "def": 10,
+          "spd": 14,
+          "element": "physical",
+          "gold": 80,
+          "xp": 70,
+          "drops": [
+            { "id": "iron_shard", "count": 1, "chance": 0.7 },
+            { "id": "leather", "count": 1, "chance": 0.3 }
+          ]
+        },
+        {
+          "id": "cave_bat",
+          "name": "矿洞蝙蝠",
+          "icon": "🦇",
+          "hp": 220,
+          "atk": 24,
+          "def": 7,
+          "spd": 24,
+          "element": "physical",
+          "gold": 70,
+          "xp": 65,
+          "drops": [
+            { "id": "bat_wing", "count": 1, "chance": 0.75 },
+            { "id": "magic_dust", "count": 1, "chance": 0.18 }
+          ]
+        },
+        {
+          "id": "stone_beetle",
+          "name": "石壳虫",
+          "icon": "🪲",
+          "hp": 360,
+          "atk": 32,
+          "def": 24,
+          "spd": 7,
+          "element": "physical",
+          "gold": 95,
+          "xp": 90,
+          "drops": [
+            { "id": "ore_dust", "count": 1, "chance": 0.8 },
+            { "id": "iron_ore", "count": 1, "chance": 0.25 }
+          ]
+        }
+      ],
+      "threat": {
+        "id": "mine_overseer",
+        "name": "矿洞监工",
+        "icon": "👷",
+        "desc": "矿洞深处的铁腕监工。击败后会显露潮湿洞穴的入口。",
+        "hp": 2300,
+        "atk": 48,
+        "def": 26,
+        "spd": 10,
+        "element": "physical",
+        "gold": 2800,
+        "xp": 1800,
+        "drops": [
+          { "id": "iron_shard", "count": 4, "chance": 1 },
+          { "id": "ore_dust", "count": 3, "chance": 1 },
+          { "id": "magic_dust", "count": 2, "chance": 0.5 }
+        ],
+        "unlocks": [{ "type": "area", "id": "wet_cave", "text": "潮湿洞穴" }]
+      }
+    },
+    {
+      "id": "wet_cave",
+      "name": "潮湿洞穴",
+      "icon": "🕸️",
+      "desc": "毒雾与湿气让这里的怪物变得危险。后续会接入毒抗和解毒食物。",
+      "unlock": { "type": "threatCleared", "areaId": "mine_entrance" },
+      "rumorAfterClear": "更深处还有未记录的道路。",
+      "monsters": [
+        {
+          "id": "poison_spider",
+          "name": "毒蛛",
+          "icon": "🕷️",
+          "hp": 520,
+          "atk": 52,
+          "def": 18,
+          "spd": 20,
+          "element": "poison",
+          "gold": 145,
+          "xp": 135,
+          "drops": [
+            { "id": "venom_sac", "count": 1, "chance": 0.72 },
+            { "id": "spider_silk", "count": 1, "chance": 0.45 }
+          ]
+        },
+        {
+          "id": "cave_lizard",
+          "name": "洞穴蜥蜴",
+          "icon": "🦎",
+          "hp": 640,
+          "atk": 58,
+          "def": 28,
+          "spd": 15,
+          "element": "physical",
+          "gold": 170,
+          "xp": 160,
+          "drops": [
+            { "id": "wet_scale", "count": 1, "chance": 0.7 },
+            { "id": "leather", "count": 2, "chance": 0.35 }
+          ]
+        },
+        {
+          "id": "spore_beast",
+          "name": "孢子兽",
+          "icon": "🍄",
+          "hp": 780,
+          "atk": 62,
+          "def": 35,
+          "spd": 9,
+          "element": "poison",
+          "gold": 190,
+          "xp": 185,
+          "drops": [
+            { "id": "spore_core", "count": 1, "chance": 0.7 },
+            { "id": "magic_dust", "count": 1, "chance": 0.35 }
+          ]
+        }
+      ],
+      "threat": {
+        "id": "swamp_spider",
+        "name": "沼泽毒蛛",
+        "icon": "🕷️",
+        "desc": "毒雾沼泽的捕食者。击败后会开启更深层的战斗传闻。",
+        "hp": 12000,
+        "atk": 150,
+        "def": 45,
+        "spd": 24,
+        "element": "poison",
+        "gold": 12000,
+        "xp": 8000,
+        "drops": [
+          { "id": "venom_sac", "count": 6, "chance": 1 },
+          { "id": "spider_silk", "count": 4, "chance": 1 },
+          { "id": "magic_dust", "count": 4, "chance": 0.8 }
+        ],
+        "unlocks": []
+      }
+    }
+  ]
+}

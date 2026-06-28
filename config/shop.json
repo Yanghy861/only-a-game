@@ -1,0 +1,18 @@
+{
+  "shopItems": [
+    { "id": "mystery_box", "name": "神秘宝箱", "icon": "🎁", "desc": "随机获得装备、材料或大量金币", "duration": 0, "buff": null, "basePrice": 3000 }
+  ],
+  "upgrades": [
+    { "id": "fish_yield", "name": "钓鱼产出", "icon": "🎣", "desc": "永久提升钓鱼金币与经验 +5%/级", "maxLevel": 20, "perLevel": 0.05, "baseCost": 1000, "costGrowth": 1.4 },
+    { "id": "wood_yield", "name": "伐木产出", "icon": "🪓", "desc": "永久提升伐木金币与经验 +5%/级", "maxLevel": 20, "perLevel": 0.05, "baseCost": 1000, "costGrowth": 1.4 },
+    { "id": "mine_yield", "name": "采矿产出", "icon": "⛏️", "desc": "永久提升采矿金币与经验 +5%/级", "maxLevel": 20, "perLevel": 0.05, "baseCost": 1000, "costGrowth": 1.4 },
+    { "id": "global_xp", "name": "全局经验", "icon": "⭐", "desc": "所有技能经验 +3%/级", "maxLevel": 30, "perLevel": 0.03, "baseCost": 2000, "costGrowth": 1.5 },
+    { "id": "global_gold", "name": "全局金币", "icon": "🪙", "desc": "所有金币收益 +3%/级", "maxLevel": 30, "perLevel": 0.03, "baseCost": 2000, "costGrowth": 1.5 },
+    { "id": "bag_capacity", "name": "背包扩容", "icon": "🎒", "desc": "背包每级 +8 格容量", "maxLevel": 10, "perLevel": 8, "baseCost": 1500, "costGrowth": 1.6 },
+    { "id": "combat_hp", "name": "战斗生命", "icon": "❤️", "desc": "永久提升战斗生命成长 +10%/级", "maxLevel": 20, "perLevel": 0.10, "baseCost": 1500, "costGrowth": 1.45 },
+    { "id": "combat_atk", "name": "战斗攻击", "icon": "⚔️", "desc": "永久提升战斗攻击成长 +10%/级", "maxLevel": 20, "perLevel": 0.10, "baseCost": 1800, "costGrowth": 1.45 },
+    { "id": "combat_def", "name": "战斗防御", "icon": "🛡️", "desc": "永久提升战斗防御成长 +10%/级", "maxLevel": 20, "perLevel": 0.10, "baseCost": 1800, "costGrowth": 1.45 },
+    { "id": "combat_crit", "name": "战斗暴击", "icon": "🎯", "desc": "永久提升暴击率 +2%/级", "maxLevel": 15, "perLevel": 0.02, "baseCost": 2500, "costGrowth": 1.5 },
+    { "id": "combat_critdmg", "name": "暴击伤害", "icon": "💥", "desc": "永久提升暴击伤害 +10%/级", "maxLevel": 15, "perLevel": 0.10, "baseCost": 2500, "costGrowth": 1.5 }
+  ]
+}

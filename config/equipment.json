@@ -1,0 +1,769 @@
+{
+  "slots": [
+    {
+      "key": "rod",
+      "name": "鱼竿",
+      "icon": "🎣",
+      "skill": "fishing",
+      "source": "craft_wood",
+      "desc": "木材制作 · 钓鱼速度加成"
+    },
+    {
+      "key": "hook",
+      "name": "鱼钩",
+      "icon": "🪝",
+      "skill": "fishing",
+      "source": "loot",
+      "desc": "钓鱼掉落 · 稀有鱼概率加成"
+    },
+    {
+      "key": "line",
+      "name": "鱼线",
+      "icon": "🧵",
+      "skill": "fishing",
+      "source": "loot",
+      "desc": "钓鱼掉落 · 金币收益加成"
+    },
+    {
+      "key": "bait",
+      "name": "鱼饵",
+      "icon": "🪱",
+      "skill": "fishing",
+      "source": "craft_ore",
+      "desc": "矿石制作 · 经验收益加成"
+    },
+    {
+      "key": "axe",
+      "name": "斧头",
+      "icon": "🪓",
+      "skill": "woodcutting",
+      "source": "craft_ore",
+      "desc": "矿石制作 · 伐木速度加成"
+    },
+    {
+      "key": "wood_charm",
+      "name": "伐木护符",
+      "icon": "🔱",
+      "skill": "woodcutting",
+      "source": "craft_fish",
+      "desc": "鱼类制作 · 稀有木材概率加成"
+    },
+    {
+      "key": "pickaxe",
+      "name": "镐子",
+      "icon": "⛏️",
+      "skill": "mining",
+      "source": "craft_wood",
+      "desc": "木材制作 · 采矿速度加成"
+    },
+    {
+      "key": "mine_charm",
+      "name": "矿工护符",
+      "icon": "🔮",
+      "skill": "mining",
+      "source": "craft_fish",
+      "desc": "鱼类制作 · 稀有矿石概率加成"
+    }
+  ],
+  "items": {
+    "rod": [
+      {
+        "id": "rod_common",
+        "name": "普通木竿",
+        "icon": "🎣",
+        "speedBonus": 0.05,
+        "recipe": {
+          "common_log": 10
+        }
+      },
+      {
+        "id": "rod_pine",
+        "name": "松木竿",
+        "icon": "🎣",
+        "speedBonus": 0.1,
+        "recipe": {
+          "pine_log": 15,
+          "common_log": 5
+        }
+      },
+      {
+        "id": "rod_oak",
+        "name": "橡木竿",
+        "icon": "🎣",
+        "speedBonus": 0.18,
+        "recipe": {
+          "oak_log": 20,
+          "pine_log": 10
+        }
+      },
+      {
+        "id": "rod_redwood",
+        "name": "红木竿",
+        "icon": "🎣",
+        "speedBonus": 0.28,
+        "recipe": {
+          "redwood_log": 25,
+          "oak_log": 15
+        }
+      },
+      {
+        "id": "rod_living",
+        "name": "活木竿",
+        "icon": "🎣",
+        "speedBonus": 0.4,
+        "recipe": {
+          "living_log": 30,
+          "redwood_log": 20
+        }
+      },
+      {
+        "id": "rod_ironwood",
+        "name": "铁木竿",
+        "icon": "🎣",
+        "speedBonus": 0.52,
+        "recipe": {
+          "ironwood_log": 35,
+          "living_log": 25
+        }
+      },
+      {
+        "id": "rod_spirit",
+        "name": "灵木竿",
+        "icon": "✨",
+        "speedBonus": 0.65,
+        "recipe": {
+          "spirit_log": 40,
+          "ironwood_log": 30
+        }
+      },
+      {
+        "id": "rod_magic",
+        "name": "魔法木竿",
+        "icon": "✨",
+        "speedBonus": 0.8,
+        "recipe": {
+          "magic_log": 50,
+          "spirit_log": 35
+        }
+      },
+      {
+        "id": "rod_worldtree",
+        "name": "世界树之竿",
+        "icon": "🌟",
+        "speedBonus": 0.95,
+        "recipe": {
+          "worldtree_shard": 60,
+          "magic_log": 40
+        }
+      },
+      {
+        "id": "rod_eternal",
+        "name": "永恒之竿",
+        "icon": "🌟",
+        "speedBonus": 1.15,
+        "recipe": {
+          "eternal_log": 80,
+          "worldtree_shard": 50
+        }
+      },
+      {
+        "id": "rod_creation",
+        "name": "创世之竿",
+        "icon": "🌟",
+        "speedBonus": 1.4,
+        "recipe": {
+          "creation_wood": 100,
+          "eternal_log": 60
+        }
+      }
+    ],
+    "hook": [
+      {
+        "id": "rusted_hook",
+        "name": "生锈鱼钩",
+        "icon": "🪝",
+        "rarityBonus": 0.03
+      },
+      {
+        "id": "fine_hook",
+        "name": "精制鱼钩",
+        "icon": "🪝",
+        "rarityBonus": 0.08
+      },
+      {
+        "id": "golden_hook",
+        "name": "黄金鱼钩",
+        "icon": "🪝",
+        "rarityBonus": 0.15,
+        "goldBonus": 0.1
+      }
+    ],
+    "line": [
+      {
+        "id": "old_line",
+        "name": "破旧鱼线",
+        "icon": "🧵",
+        "goldBonus": 0.05
+      },
+      {
+        "id": "strong_line",
+        "name": "强化鱼线",
+        "icon": "🧵",
+        "goldBonus": 0.12
+      }
+    ],
+    "bait": [
+      {
+        "id": "bait_copper",
+        "name": "铜饵",
+        "icon": "🪱",
+        "xpBonus": 0.05,
+        "recipe": {
+          "copper_ore": 10
+        }
+      },
+      {
+        "id": "bait_iron",
+        "name": "铁饵",
+        "icon": "🪱",
+        "xpBonus": 0.1,
+        "recipe": {
+          "iron_ore": 15,
+          "copper_ore": 5
+        }
+      },
+      {
+        "id": "bait_tin",
+        "name": "锡饵",
+        "icon": "🪱",
+        "xpBonus": 0.16,
+        "recipe": {
+          "tin_ore": 20,
+          "iron_ore": 10
+        }
+      },
+      {
+        "id": "bait_silver",
+        "name": "银饵",
+        "icon": "🪱",
+        "xpBonus": 0.22,
+        "recipe": {
+          "silver_ore": 25,
+          "tin_ore": 15
+        }
+      },
+      {
+        "id": "bait_gold",
+        "name": "金饵",
+        "icon": "🪱",
+        "xpBonus": 0.3,
+        "recipe": {
+          "gold_ore": 30,
+          "silver_ore": 20
+        }
+      },
+      {
+        "id": "bait_platinum",
+        "name": "铂饵",
+        "icon": "🪱",
+        "xpBonus": 0.4,
+        "recipe": {
+          "platinum_ore": 35,
+          "gold_ore": 25
+        }
+      },
+      {
+        "id": "bait_crystal",
+        "name": "水晶饵",
+        "icon": "🪱",
+        "xpBonus": 0.52,
+        "recipe": {
+          "crystal_ore": 40,
+          "platinum_ore": 30
+        }
+      },
+      {
+        "id": "bait_mithril",
+        "name": "秘银饵",
+        "icon": "🪱",
+        "xpBonus": 0.65,
+        "recipe": {
+          "mithril_ore": 50,
+          "crystal_ore": 35
+        }
+      },
+      {
+        "id": "bait_adamant",
+        "name": "精金饵",
+        "icon": "🪱",
+        "xpBonus": 0.8,
+        "recipe": {
+          "adamant_ore": 60,
+          "mithril_ore": 40
+        }
+      },
+      {
+        "id": "bait_star",
+        "name": "星辰饵",
+        "icon": "✨",
+        "xpBonus": 1,
+        "recipe": {
+          "star_ore": 80,
+          "adamant_ore": 50
+        }
+      },
+      {
+        "id": "bait_creation",
+        "name": "创世之饵",
+        "icon": "🌟",
+        "xpBonus": 1.3,
+        "recipe": {
+          "creation_ore": 100,
+          "star_ore": 60
+        }
+      }
+    ],
+    "axe": [
+      {
+        "id": "axe_copper",
+        "name": "铜斧",
+        "icon": "🪓",
+        "speedBonus": 0.05,
+        "recipe": {
+          "copper_ore": 10
+        }
+      },
+      {
+        "id": "axe_iron",
+        "name": "铁斧",
+        "icon": "🪓",
+        "speedBonus": 0.1,
+        "recipe": {
+          "iron_ore": 15,
+          "copper_ore": 5
+        }
+      },
+      {
+        "id": "axe_tin",
+        "name": "锡斧",
+        "icon": "🪓",
+        "speedBonus": 0.16,
+        "recipe": {
+          "tin_ore": 20,
+          "iron_ore": 10
+        }
+      },
+      {
+        "id": "axe_silver",
+        "name": "银斧",
+        "icon": "🪓",
+        "speedBonus": 0.22,
+        "recipe": {
+          "silver_ore": 25,
+          "tin_ore": 15
+        }
+      },
+      {
+        "id": "axe_gold",
+        "name": "金斧",
+        "icon": "🪓",
+        "speedBonus": 0.3,
+        "recipe": {
+          "gold_ore": 30,
+          "silver_ore": 20
+        }
+      },
+      {
+        "id": "axe_platinum",
+        "name": "铂斧",
+        "icon": "🪓",
+        "speedBonus": 0.4,
+        "recipe": {
+          "platinum_ore": 35,
+          "gold_ore": 25
+        }
+      },
+      {
+        "id": "axe_crystal",
+        "name": "水晶斧",
+        "icon": "🪓",
+        "speedBonus": 0.52,
+        "recipe": {
+          "crystal_ore": 40,
+          "platinum_ore": 30
+        }
+      },
+      {
+        "id": "axe_mithril",
+        "name": "秘银斧",
+        "icon": "🪓",
+        "speedBonus": 0.65,
+        "recipe": {
+          "mithril_ore": 50,
+          "crystal_ore": 35
+        }
+      },
+      {
+        "id": "axe_adamant",
+        "name": "精金斧",
+        "icon": "🪓",
+        "speedBonus": 0.8,
+        "recipe": {
+          "adamant_ore": 60,
+          "mithril_ore": 40
+        }
+      },
+      {
+        "id": "axe_star",
+        "name": "星辰斧",
+        "icon": "✨",
+        "speedBonus": 1,
+        "recipe": {
+          "star_ore": 80,
+          "adamant_ore": 50
+        }
+      },
+      {
+        "id": "axe_creation",
+        "name": "创世之斧",
+        "icon": "🌟",
+        "speedBonus": 1.3,
+        "recipe": {
+          "creation_ore": 100,
+          "star_ore": 60
+        }
+      }
+    ],
+    "wood_charm": [
+      {
+        "id": "wc_minnow",
+        "name": "小鱼护符",
+        "icon": "🔱",
+        "rarityBonus": 0.03,
+        "recipe": {
+          "minnow": 15
+        }
+      },
+      {
+        "id": "wc_carp",
+        "name": "鲤鱼护符",
+        "icon": "🔱",
+        "rarityBonus": 0.06,
+        "recipe": {
+          "carp": 20,
+          "minnow": 10
+        }
+      },
+      {
+        "id": "wc_trout",
+        "name": "鳟鱼护符",
+        "icon": "🔱",
+        "rarityBonus": 0.1,
+        "recipe": {
+          "trout": 25,
+          "perch": 15
+        }
+      },
+      {
+        "id": "wc_pike",
+        "name": "梭鱼护符",
+        "icon": "🔱",
+        "rarityBonus": 0.15,
+        "recipe": {
+          "pike": 30,
+          "catfish": 20
+        }
+      },
+      {
+        "id": "wc_mullet",
+        "name": "鲻鱼护符",
+        "icon": "🔱",
+        "rarityBonus": 0.2,
+        "recipe": {
+          "mullet": 60
+        }
+      },
+      {
+        "id": "wc_tuna",
+        "name": "金枪鱼护符",
+        "icon": "🔱",
+        "rarityBonus": 0.28,
+        "recipe": {
+          "tuna": 40,
+          "mackerel": 30
+        }
+      },
+      {
+        "id": "wc_angelfish",
+        "name": "神仙鱼护符",
+        "icon": "🔱",
+        "rarityBonus": 0.38,
+        "recipe": {
+          "angelfish": 45,
+          "clownfish": 35
+        }
+      },
+      {
+        "id": "wc_anglerfish",
+        "name": "鮟鱇护符",
+        "icon": "🔱",
+        "rarityBonus": 0.5,
+        "recipe": {
+          "anglerfish": 50,
+          "viperfish": 40
+        }
+      },
+      {
+        "id": "wc_ghost",
+        "name": "幽灵护符",
+        "icon": "🔱",
+        "rarityBonus": 0.65,
+        "recipe": {
+          "ghost_fish": 60,
+          "wreck_bass": 50
+        }
+      },
+      {
+        "id": "wc_void",
+        "name": "虚空护符",
+        "icon": "✨",
+        "rarityBonus": 0.85,
+        "recipe": {
+          "void_fish": 70,
+          "shadow_ray": 60
+        }
+      },
+      {
+        "id": "wc_creator",
+        "name": "创世护符",
+        "icon": "🌟",
+        "rarityBonus": 1.1,
+        "recipe": {
+          "creator": 5,
+          "void_king": 30
+        }
+      }
+    ],
+    "pickaxe": [
+      {
+        "id": "pick_common",
+        "name": "普通木镐",
+        "icon": "⛏️",
+        "speedBonus": 0.05,
+        "recipe": {
+          "common_log": 10
+        }
+      },
+      {
+        "id": "pick_pine",
+        "name": "松木镐",
+        "icon": "⛏️",
+        "speedBonus": 0.1,
+        "recipe": {
+          "pine_log": 15,
+          "common_log": 5
+        }
+      },
+      {
+        "id": "pick_oak",
+        "name": "橡木镐",
+        "icon": "⛏️",
+        "speedBonus": 0.18,
+        "recipe": {
+          "oak_log": 20,
+          "pine_log": 10
+        }
+      },
+      {
+        "id": "pick_redwood",
+        "name": "红木镐",
+        "icon": "⛏️",
+        "speedBonus": 0.28,
+        "recipe": {
+          "redwood_log": 25,
+          "oak_log": 15
+        }
+      },
+      {
+        "id": "pick_living",
+        "name": "活木镐",
+        "icon": "⛏️",
+        "speedBonus": 0.4,
+        "recipe": {
+          "living_log": 30,
+          "redwood_log": 20
+        }
+      },
+      {
+        "id": "pick_ironwood",
+        "name": "铁木镐",
+        "icon": "⛏️",
+        "speedBonus": 0.52,
+        "recipe": {
+          "ironwood_log": 35,
+          "living_log": 25
+        }
+      },
+      {
+        "id": "pick_spirit",
+        "name": "灵木镐",
+        "icon": "✨",
+        "speedBonus": 0.65,
+        "recipe": {
+          "spirit_log": 40,
+          "ironwood_log": 30
+        }
+      },
+      {
+        "id": "pick_magic",
+        "name": "魔法木镐",
+        "icon": "✨",
+        "speedBonus": 0.8,
+        "recipe": {
+          "magic_log": 50,
+          "spirit_log": 35
+        }
+      },
+      {
+        "id": "pick_worldtree",
+        "name": "世界树之镐",
+        "icon": "🌟",
+        "speedBonus": 0.95,
+        "recipe": {
+          "worldtree_shard": 60,
+          "magic_log": 40
+        }
+      },
+      {
+        "id": "pick_eternal",
+        "name": "永恒之镐",
+        "icon": "🌟",
+        "speedBonus": 1.15,
+        "recipe": {
+          "eternal_log": 80,
+          "worldtree_shard": 50
+        }
+      },
+      {
+        "id": "pick_creation",
+        "name": "创世之镐",
+        "icon": "🌟",
+        "speedBonus": 1.4,
+        "recipe": {
+          "creation_wood": 100,
+          "eternal_log": 60
+        }
+      }
+    ],
+    "mine_charm": [
+      {
+        "id": "mc_minnow",
+        "name": "小鱼矿符",
+        "icon": "🔮",
+        "rarityBonus": 0.03,
+        "recipe": {
+          "minnow": 15
+        }
+      },
+      {
+        "id": "mc_carp",
+        "name": "鲤鱼矿符",
+        "icon": "🔮",
+        "rarityBonus": 0.06,
+        "recipe": {
+          "carp": 20,
+          "minnow": 10
+        }
+      },
+      {
+        "id": "mc_trout",
+        "name": "鳟鱼矿符",
+        "icon": "🔮",
+        "rarityBonus": 0.1,
+        "recipe": {
+          "trout": 25,
+          "perch": 15
+        }
+      },
+      {
+        "id": "mc_pike",
+        "name": "梭鱼矿符",
+        "icon": "🔮",
+        "rarityBonus": 0.15,
+        "recipe": {
+          "pike": 30,
+          "catfish": 20
+        }
+      },
+      {
+        "id": "mc_mullet",
+        "name": "鲻鱼矿符",
+        "icon": "🔮",
+        "rarityBonus": 0.2,
+        "recipe": {
+          "mullet": 60
+        }
+      },
+      {
+        "id": "mc_tuna",
+        "name": "金枪鱼矿符",
+        "icon": "🔮",
+        "rarityBonus": 0.28,
+        "recipe": {
+          "tuna": 40,
+          "mackerel": 30
+        }
+      },
+      {
+        "id": "mc_angelfish",
+        "name": "神仙鱼矿符",
+        "icon": "🔮",
+        "rarityBonus": 0.38,
+        "recipe": {
+          "angelfish": 45,
+          "clownfish": 35
+        }
+      },
+      {
+        "id": "mc_anglerfish",
+        "name": "鮟鱇矿符",
+        "icon": "🔮",
+        "rarityBonus": 0.5,
+        "recipe": {
+          "anglerfish": 50,
+          "viperfish": 40
+        }
+      },
+      {
+        "id": "mc_ghost",
+        "name": "幽灵矿符",
+        "icon": "🔮",
+        "rarityBonus": 0.65,
+        "recipe": {
+          "ghost_fish": 60,
+          "wreck_bass": 50
+        }
+      },
+      {
+        "id": "mc_void",
+        "name": "虚空矿符",
+        "icon": "✨",
+        "rarityBonus": 0.85,
+        "recipe": {
+          "void_fish": 70,
+          "shadow_ray": 60
+        }
+      },
+      {
+        "id": "mc_creator",
+        "name": "创世矿符",
+        "icon": "🌟",
+        "rarityBonus": 1.1,
+        "recipe": {
+          "creator": 5,
+          "void_king": 30
+        }
+      }
+    ]
+  }
+}

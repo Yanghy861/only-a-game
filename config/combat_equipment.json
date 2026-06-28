@@ -1,0 +1,76 @@
+{
+  "slots": [
+    { "key": "weapon", "name": "武器", "icon": "⚔️" },
+    { "key": "offhand", "name": "副手", "icon": "🛡️" },
+    { "key": "chest", "name": "上衣", "icon": "🥋" },
+    { "key": "legs", "name": "下装", "icon": "👖" },
+    { "key": "boots", "name": "鞋子", "icon": "🥾" },
+    { "key": "arms", "name": "手臂", "icon": "🧤" },
+    { "key": "shoulders", "name": "护肩", "icon": "🧣" },
+    { "key": "ring", "name": "戒指", "icon": "💍" },
+    { "key": "amulet", "name": "项链", "icon": "📿" }
+  ],
+  "items": {
+    "weapon": [
+      { "id": "w_training_sword", "name": "训练短剑", "icon": "🗡️", "atk": 6, "recipe": { "slime_gel": 3, "oak_log": 4 }, "desc": "轻便的单手武器,可搭配副手。" },
+      { "id": "w_hunting_bow", "name": "猎弓", "icon": "🏹", "atk": 8, "spd": 3, "twoHanded": true, "recipe": { "oak_log": 8, "wolf_bone": 2 }, "desc": "双手武器。速度更快,会锁定副手。" },
+      { "id": "w_miner_pickblade", "name": "矿刃镐", "icon": "⛏️", "atk": 18, "def": 4, "recipe": { "iron_shard": 6, "ore_dust": 4 }, "desc": "兼具攻击和防御的矿洞武器。" },
+      { "id": "w_spore_staff", "name": "孢子法杖", "icon": "🔮", "atk": 24, "critDmg": 0.25, "twoHanded": true, "recipe": { "spore_core": 4, "magic_dust": 8, "resin": 4 }, "desc": "双手武器。提高爆发伤害。" }
+    ],
+    "offhand": [
+      { "id": "o_buckler", "name": "圆木小盾", "icon": "🛡️", "def": 5, "hp": 15, "recipe": { "oak_log": 6, "resin": 2 }, "desc": "朴素副手,适合提高稳定性。" },
+      { "id": "o_bone_charm", "name": "骨质护符", "icon": "🦴", "atk": 4, "crit": 0.03, "recipe": { "wolf_bone": 5, "slime_gel": 2 }, "desc": "偏进攻的副手。" },
+      { "id": "o_iron_guard", "name": "铁片护手", "icon": "🛡️", "def": 12, "hp": 35, "recipe": { "iron_shard": 8, "leather": 3 }, "desc": "矿洞材料打造的防御副手。" }
+    ],
+    "chest": [
+      { "id": "c_padded_coat", "name": "垫布上衣", "icon": "🥋", "def": 4, "hp": 20, "recipe": { "leather": 4, "slime_gel": 2 }, "desc": "基础防护。" },
+      { "id": "c_wolfhide_jacket", "name": "狼皮短衣", "icon": "🧥", "def": 8, "spd": 2, "hp": 28, "recipe": { "leather": 8, "wolf_bone": 3 }, "desc": "轻便,兼顾速度。" },
+      { "id": "c_iron_scale", "name": "铁片上衣", "icon": "🥋", "def": 20, "hp": 70, "recipe": { "iron_shard": 12, "ore_dust": 6, "leather": 4 }, "desc": "更厚重的防护。" }
+    ],
+    "legs": [
+      { "id": "l_travel_pants", "name": "旅行长裤", "icon": "👖", "def": 3, "spd": 1, "recipe": { "leather": 3 }, "desc": "基础下装。" },
+      { "id": "l_miner_greaves", "name": "矿工护腿", "icon": "👖", "def": 12, "hp": 45, "recipe": { "iron_shard": 8, "leather": 3 }, "desc": "稳定的矿洞护腿。" },
+      { "id": "l_silk_wrappings", "name": "蛛丝裹腿", "icon": "🕸️", "def": 10, "spd": 5, "recipe": { "spider_silk": 8, "wet_scale": 3 }, "desc": "轻巧且灵活。" }
+    ],
+    "boots": [
+      { "id": "b_leather_boots", "name": "皮靴", "icon": "🥾", "def": 2, "spd": 2, "recipe": { "leather": 3 }, "desc": "基础鞋子。" },
+      { "id": "b_cave_treads", "name": "洞穴踏靴", "icon": "🥾", "def": 7, "spd": 4, "recipe": { "bat_wing": 4, "leather": 4 }, "desc": "适合在洞穴中行动。" },
+      { "id": "b_scaled_boots", "name": "湿鳞靴", "icon": "🥾", "def": 12, "hp": 35, "spd": 3, "recipe": { "wet_scale": 6, "spider_silk": 3 }, "desc": "更好的防护和机动。" }
+    ],
+    "arms": [
+      { "id": "ar_work_gloves", "name": "作战手套", "icon": "🧤", "atk": 3, "def": 2, "recipe": { "leather": 4 }, "desc": "基础手臂装备。" },
+      { "id": "ar_bone_bracers", "name": "骨质护腕", "icon": "🧤", "atk": 8, "crit": 0.04, "recipe": { "wolf_bone": 6, "resin": 3 }, "desc": "提高进攻能力。" },
+      { "id": "ar_venom_wraps", "name": "毒囊缠手", "icon": "🧤", "atk": 12, "critDmg": 0.12, "recipe": { "venom_sac": 5, "spider_silk": 5 }, "desc": "危险但强力的进攻装备。" }
+    ],
+    "shoulders": [
+      { "id": "sh_leaf_mantle", "name": "叶纹披肩", "icon": "🧣", "hp": 18, "def": 3, "recipe": { "resin": 4, "oak_log": 4 }, "desc": "林地材料制成的披肩。" },
+      { "id": "sh_iron_shoulders", "name": "铁片护肩", "icon": "🧣", "def": 14, "hp": 40, "recipe": { "iron_shard": 8, "ore_dust": 5 }, "desc": "提供稳定防御。" },
+      { "id": "sh_spore_shawl", "name": "孢子披肩", "icon": "🧣", "atk": 10, "critDmg": 0.16, "recipe": { "spore_core": 4, "magic_dust": 6 }, "desc": "提高爆发伤害。" }
+    ],
+    "ring": [
+      { "id": "r_resin_ring", "name": "树脂戒指", "icon": "💍", "hp": 25, "recipe": { "resin": 5 }, "desc": "提供少量生命。" },
+      { "id": "r_iron_signet", "name": "铁印戒指", "icon": "💍", "atk": 7, "def": 4, "recipe": { "iron_shard": 6, "ore_dust": 4 }, "desc": "攻防兼具。" },
+      { "id": "r_venom_loop", "name": "毒环", "icon": "💍", "crit": 0.08, "critDmg": 0.1, "recipe": { "venom_sac": 4, "magic_dust": 4 }, "desc": "偏向暴击构筑。" }
+    ],
+    "amulet": [
+      { "id": "am_bone_charm", "name": "骨链", "icon": "📿", "atk": 5, "hp": 20, "recipe": { "wolf_bone": 4, "leather": 2 }, "desc": "早期通用项链。" },
+      { "id": "am_bat_lantern", "name": "蝠翼灯坠", "icon": "📿", "spd": 4, "crit": 0.04, "recipe": { "bat_wing": 6, "magic_dust": 3 }, "desc": "提升速度和暴击。" },
+      { "id": "am_spore_core", "name": "孢子核心坠", "icon": "📿", "atk": 16, "hp": 45, "critDmg": 0.18, "recipe": { "spore_core": 5, "venom_sac": 3, "magic_dust": 6 }, "desc": "潮湿洞穴的核心构筑件。" }
+    ]
+  },
+  "monsterDrops": [
+    { "id": "slime_gel", "name": "凝胶", "icon": "🟢", "desc": "史莱姆掉落的黏性材料。" },
+    { "id": "leather", "name": "皮革", "icon": "🟫", "desc": "制作防具和轻便装备的材料。" },
+    { "id": "wolf_bone", "name": "狼骨", "icon": "🦴", "desc": "制作武器和饰品的材料。" },
+    { "id": "resin", "name": "树脂", "icon": "🟡", "desc": "林地怪物掉落的粘合材料。" },
+    { "id": "iron_shard", "name": "铁片", "icon": "🔩", "desc": "矿洞怪物身上搜集的金属片。" },
+    { "id": "bat_wing", "name": "蝙蝠翼", "icon": "🦇", "desc": "轻巧而有韧性的材料。" },
+    { "id": "ore_dust", "name": "粗矿粉", "icon": "🪨", "desc": "混杂着金属碎屑的矿粉。" },
+    { "id": "venom_sac", "name": "毒囊", "icon": "☠️", "desc": "带有毒性的战斗材料。" },
+    { "id": "spider_silk", "name": "蛛丝", "icon": "🕸️", "desc": "轻而坚韧的丝线。" },
+    { "id": "wet_scale", "name": "湿鳞", "icon": "🦎", "desc": "洞穴蜥蜴掉落的鳞片。" },
+    { "id": "spore_core", "name": "孢子核心", "icon": "🍄", "desc": "孢子兽体内的魔性核心。" },
+    { "id": "magic_dust", "name": "魔法粉尘", "icon": "✨", "desc": "蕴含魔力的粉尘。" },
+    { "id": "dragon_scale", "name": "龙鳞", "icon": "🐉", "desc": "后期龙类材料。" }
+  ]
+}

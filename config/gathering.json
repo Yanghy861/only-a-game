@@ -1,0 +1,157 @@
+{
+  "woodcutting": [
+    {
+      "id": "grove", "name": "普通树林", "icon": "🌲", "desc": "郁郁葱葱的初学者林地。",
+      "requiredLevel": 1, "baseTime": 4000,
+      "drops": [
+        { "id": "common_log", "name": "普通木材", "icon": "🪵", "xp": 8, "gold": 3, "weight": 70 },
+        { "id": "pine_log", "name": "松木", "icon": "🌲", "xp": 20, "gold": 10, "weight": 25 },
+        { "id": "oak_log", "name": "橡木", "icon": "🌳", "xp": 50, "gold": 30, "weight": 5 }
+      ]
+    },
+    {
+      "id": "pine_forest", "name": "松林", "icon": "🌲", "desc": "挺拔的松树林。",
+      "requiredLevel": 8, "baseTime": 5500,
+      "drops": [
+        { "id": "pine_log", "name": "松木", "icon": "🌲", "xp": 30, "gold": 18, "weight": 60 },
+        { "id": "oak_log", "name": "橡木", "icon": "🌳", "xp": 70, "gold": 45, "weight": 30 },
+        { "id": "redwood_log", "name": "红木", "icon": "🪵", "xp": 150, "gold": 110, "weight": 10 }
+      ]
+    },
+    {
+      "id": "oak_forest", "name": "古老橡林", "icon": "🌳", "desc": "参天古木,木质坚硬。",
+      "requiredLevel": 18, "baseTime": 7000,
+      "drops": [
+        { "id": "oak_log", "name": "橡木", "icon": "🌳", "xp": 80, "gold": 55, "weight": 55 },
+        { "id": "redwood_log", "name": "红木", "icon": "🪵", "xp": 180, "gold": 140, "weight": 30 },
+        { "id": "living_log", "name": "活木", "icon": "🌱", "xp": 400, "gold": 360, "weight": 15 }
+      ]
+    },
+    {
+      "id": "redwood_forest", "name": "红木森林", "icon": "🪵", "desc": "巨大的红木林立。",
+      "requiredLevel": 30, "baseTime": 8500,
+      "drops": [
+        { "id": "redwood_log", "name": "红木", "icon": "🪵", "xp": 220, "gold": 180, "weight": 55 },
+        { "id": "living_log", "name": "活木", "icon": "🌱", "xp": 500, "gold": 460, "weight": 30 },
+        { "id": "ironwood_log", "name": "铁木", "icon": "🪵", "xp": 1100, "gold": 1100, "weight": 15 }
+      ]
+    },
+    {
+      "id": "misty_jungle", "name": "迷雾丛林", "icon": "🌫️", "desc": "雾气弥漫的神秘丛林。",
+      "requiredLevel": 42, "baseTime": 10000,
+      "drops": [
+        { "id": "living_log", "name": "活木", "icon": "🌱", "xp": 600, "gold": 580, "weight": 50 },
+        { "id": "ironwood_log", "name": "铁木", "icon": "🪵", "xp": 1400, "gold": 1500, "weight": 35 },
+        { "id": "spirit_log", "name": "灵木", "icon": "✨", "xp": 3500, "gold": 4000, "weight": 15 }
+      ]
+    },
+    {
+      "id": "magic_forest", "name": "魔法森林", "icon": "✨", "desc": "闪烁着微光的神秘林地。",
+      "requiredLevel": 55, "baseTime": 11500,
+      "drops": [
+        { "id": "ironwood_log", "name": "铁木", "icon": "🪵", "xp": 1800, "gold": 2000, "weight": 45 },
+        { "id": "spirit_log", "name": "灵木", "icon": "✨", "xp": 4500, "gold": 5200, "weight": 35 },
+        { "id": "magic_log", "name": "魔法木", "icon": "✨", "xp": 12000, "gold": 15000, "weight": 18 },
+        { "id": "worldtree_shard", "name": "世界树碎片", "icon": "🌟", "xp": 40000, "gold": 55000, "weight": 2 }
+      ]
+    },
+    {
+      "id": "ancient_woods", "name": "远古林地", "icon": "🌳", "desc": "存在了千年的古树。",
+      "requiredLevel": 70, "baseTime": 13000,
+      "drops": [
+        { "id": "spirit_log", "name": "灵木", "icon": "✨", "xp": 7000, "gold": 8200, "weight": 45 },
+        { "id": "magic_log", "name": "魔法木", "icon": "✨", "xp": 18000, "gold": 23000, "weight": 35 },
+        { "id": "worldtree_shard", "name": "世界树碎片", "icon": "🌟", "xp": 60000, "gold": 85000, "weight": 18 },
+        { "id": "eternal_log", "name": "永恒之木", "icon": "🌟", "xp": 200000, "gold": 320000, "weight": 2 }
+      ]
+    },
+    {
+      "id": "worldtree", "name": "世界树", "icon": "🌟", "desc": "支撑世界的神树,终极伐木场。",
+      "requiredLevel": 88, "baseTime": 15000,
+      "drops": [
+        { "id": "magic_log", "name": "魔法木", "icon": "✨", "xp": 30000, "gold": 40000, "weight": 40 },
+        { "id": "worldtree_shard", "name": "世界树碎片", "icon": "🌟", "xp": 100000, "gold": 150000, "weight": 35 },
+        { "id": "eternal_log", "name": "永恒之木", "icon": "🌟", "xp": 350000, "gold": 580000, "weight": 22 },
+        { "id": "creation_wood", "name": "创世之木", "icon": "🌟", "xp": 1500000, "gold": 2800000, "weight": 3 }
+      ]
+    }
+  ],
+  "mining": [
+    {
+      "id": "quarry", "name": "露天矿坑", "icon": "⛏️", "desc": "浅层矿脉,适合新手。",
+      "requiredLevel": 1, "baseTime": 5000,
+      "drops": [
+        { "id": "copper_ore", "name": "铜矿", "icon": "🪨", "xp": 10, "gold": 4, "weight": 70 },
+        { "id": "iron_ore", "name": "铁矿", "icon": "⛏️", "xp": 25, "gold": 12, "weight": 25 },
+        { "id": "tin_ore", "name": "锡矿", "icon": "🪨", "xp": 60, "gold": 40, "weight": 5 }
+      ]
+    },
+    {
+      "id": "shallow_mine", "name": "浅层矿洞", "icon": "🕳️", "desc": "刚深入地下的矿洞。",
+      "requiredLevel": 8, "baseTime": 6500,
+      "drops": [
+        { "id": "iron_ore", "name": "铁矿", "icon": "⛏️", "xp": 40, "gold": 25, "weight": 55 },
+        { "id": "tin_ore", "name": "锡矿", "icon": "🪨", "xp": 90, "gold": 65, "weight": 30 },
+        { "id": "silver_ore", "name": "银矿", "icon": "⚪", "xp": 200, "gold": 160, "weight": 15 }
+      ]
+    },
+    {
+      "id": "deep_mine", "name": "深层矿洞", "icon": "🕳️", "desc": "幽暗矿洞,蕴含贵金属。",
+      "requiredLevel": 18, "baseTime": 8000,
+      "drops": [
+        { "id": "tin_ore", "name": "锡矿", "icon": "🪨", "xp": 120, "gold": 90, "weight": 50 },
+        { "id": "silver_ore", "name": "银矿", "icon": "⚪", "xp": 280, "gold": 240, "weight": 35 },
+        { "id": "gold_ore", "name": "金矿", "icon": "🪙", "xp": 600, "gold": 560, "weight": 15 }
+      ]
+    },
+    {
+      "id": "silver_vein", "name": "银矿脉", "icon": "⚪", "desc": "纯度极高的银矿。",
+      "requiredLevel": 30, "baseTime": 9500,
+      "drops": [
+        { "id": "silver_ore", "name": "银矿", "icon": "⚪", "xp": 350, "gold": 320, "weight": 50 },
+        { "id": "gold_ore", "name": "金矿", "icon": "🪙", "xp": 800, "gold": 780, "weight": 35 },
+        { "id": "platinum_ore", "name": "铂矿", "icon": "⚪", "xp": 2000, "gold": 2200, "weight": 15 }
+      ]
+    },
+    {
+      "id": "gold_vein", "name": "金矿脉", "icon": "🪙", "desc": "闪闪发光的金矿脉。",
+      "requiredLevel": 42, "baseTime": 11000,
+      "drops": [
+        { "id": "gold_ore", "name": "金矿", "icon": "🪙", "xp": 1000, "gold": 1000, "weight": 45 },
+        { "id": "platinum_ore", "name": "铂矿", "icon": "⚪", "xp": 2500, "gold": 2900, "weight": 35 },
+        { "id": "crystal_ore", "name": "水晶矿", "icon": "💎", "xp": 6500, "gold": 8200, "weight": 18 },
+        { "id": "star_ore", "name": "星辰矿", "icon": "✨", "xp": 30000, "gold": 42000, "weight": 2 }
+      ]
+    },
+    {
+      "id": "mithril_vein", "name": "秘银矿脉", "icon": "💠", "desc": "散发着幽光的稀有矿脉。",
+      "requiredLevel": 55, "baseTime": 12500,
+      "drops": [
+        { "id": "platinum_ore", "name": "铂矿", "icon": "⚪", "xp": 3200, "gold": 3800, "weight": 40 },
+        { "id": "crystal_ore", "name": "水晶矿", "icon": "💎", "xp": 8500, "gold": 11000, "weight": 35 },
+        { "id": "mithril_ore", "name": "秘银", "icon": "💠", "xp": 22000, "gold": 30000, "weight": 22 },
+        { "id": "star_ore", "name": "星辰矿", "icon": "✨", "xp": 80000, "gold": 120000, "weight": 3 }
+      ]
+    },
+    {
+      "id": "adamant_vein", "name": "精金矿脉", "icon": "💎", "desc": "坚硬无比的精金矿。",
+      "requiredLevel": 70, "baseTime": 14000,
+      "drops": [
+        { "id": "crystal_ore", "name": "水晶矿", "icon": "💎", "xp": 12000, "gold": 16000, "weight": 40 },
+        { "id": "mithril_ore", "name": "秘银", "icon": "💠", "xp": 30000, "gold": 42000, "weight": 35 },
+        { "id": "adamant_ore", "name": "精金", "icon": "💎", "xp": 100000, "gold": 150000, "weight": 22 },
+        { "id": "star_ore", "name": "星辰矿", "icon": "✨", "xp": 250000, "gold": 400000, "weight": 3 }
+      ]
+    },
+    {
+      "id": "stellar_vein", "name": "星辰矿脉", "icon": "✨", "desc": "坠落星辰形成的矿脉,终极采矿场。",
+      "requiredLevel": 88, "baseTime": 16000,
+      "drops": [
+        { "id": "mithril_ore", "name": "秘银", "icon": "💠", "xp": 50000, "gold": 70000, "weight": 40 },
+        { "id": "adamant_ore", "name": "精金", "icon": "💎", "xp": 180000, "gold": 280000, "weight": 35 },
+        { "id": "star_ore", "name": "星辰矿", "icon": "✨", "xp": 600000, "gold": 1000000, "weight": 22 },
+        { "id": "creation_ore", "name": "创世之石", "icon": "🌟", "xp": 2500000, "gold": 4500000, "weight": 3 }
+      ]
+    }
+  ]
+}
